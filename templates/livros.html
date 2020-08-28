@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Visualizar Livros</title>
+</head>
+<body>
+
+    <h1>Visualizar de Livros</h1>
+
+    <div>
+        <a href="/livros/criar">Adicionar livro</a>
+        <table>
+            <thead>
+              <tr>
+                <th style="width: 10px">#</th>
+                <th>Nome </th>
+                <th style="width: 140px">&nbsp;</th>
+              </tr>
+            </thead>
+            <tbody>
+              {loop="$DATA"}
+              <tr>
+                <td>{$value.id}</td>
+                <td>{$value.nome}</td>
+                <td>
+                  <a href="/livros/{$value.id}" > Editar</a>
+                  <a href="/livros/{$value.id}/apagar" onclick="return confirm('Deseja realmente excluir este registro?')"> Excluir</a>
+                </td>
+              </tr>
+              {/loop}
+            </tbody>
+          </table>
+    </div>
+    
+</body>
+</html>
