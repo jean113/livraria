@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Editar Autores</title>
+</head>
+<body>
+
+    <h1>Editar Autores</h1>
+    
+    <form action="/editar/{$DATA.id}" method="post" enctype="multipart/form-data">
+        <input type="text"  id="{$DATA.nome}" 
+                name="nome" placeholder="Digite o nome do autor" 
+                value="{$DATA.nome}">
+        <button type="submit">Editar</button>
+    </form>
+    
+</body>
+</html>
