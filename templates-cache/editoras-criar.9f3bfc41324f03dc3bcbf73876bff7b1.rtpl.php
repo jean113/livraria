@@ -3,14 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cadastro de Autores</title>
+    <title>Cadastro de Editoras</title>
 </head>
 <body>
 
-    <h1>Cadastro de Autores</h1>
+    <h1>Cadastro de Editoras</h1>
 
-    <form role="form" action="/autores/criar" method="post">
-        <input type="text" name="nome" placeHolder="Nome do Autor"/>
+    <form role="form" action="/editoras/criar" method="post">
+        <input type="text" name="nome" placeHolder="Nome do editora"/>
         <button type="submit">Salvar</button>
     </form>
 

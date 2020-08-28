@@ -3,14 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Visualizar Autores</title>
+    <title>Visualizar Editoras</title>
 </head>
 <body>
 
-    <h1>Visualizar de Autores</h1>
+    <h1>Visualizar de Editoras</h1>
 
     <div>
-        <a href="/autores/criar">Adicionar autor</a>
+        <a href="/editoras/criar">Adicionar editora</a>
         <table>
             <thead>
               <tr>
@@ -25,8 +25,8 @@
                 <td><?php echo htmlspecialchars( $value1["id"], ENT_COMPAT, 'UTF-8', FALSE ); ?></td>
                 <td><?php echo htmlspecialchars( $value1["nome"], ENT_COMPAT, 'UTF-8', FALSE ); ?></td>
                 <td>
-                  <a href="/autores/<?php echo htmlspecialchars( $value1["id"], ENT_COMPAT, 'UTF-8', FALSE ); ?>" > Editar</a>
-                  <a href="/autores/<?php echo htmlspecialchars( $value1["id"], ENT_COMPAT, 'UTF-8', FALSE ); ?>/apagar" onclick="return confirm('Deseja realmente excluir este registro?')"> Excluir</a>
+                  <a href="/editoras/<?php echo htmlspecialchars( $value1["id"], ENT_COMPAT, 'UTF-8', FALSE ); ?>" > Editar</a>
+                  <a href="/editoras/<?php echo htmlspecialchars( $value1["id"], ENT_COMPAT, 'UTF-8', FALSE ); ?>/apagar" onclick="return confirm('Deseja realmente excluir este registro?')"> Excluir</a>
                 </td>
               </tr>
               <?php } ?>
