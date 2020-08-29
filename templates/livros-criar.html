@@ -10,10 +10,27 @@
     <h1>Cadastro de Livros</h1>
 
     <form role="form" action="/livros/criar" method="post">
+
         <input type="text" name="nome" placeHolder="Nome do livro"/>
+
+        <select id="autor" name="autor">
+            {loop="$DATA"}
+                <option value={$value.id}>{$value.nome}</option>
+            {/loop}
+        </select>
+
+        <select id="editora" name="editora">
+            {loop="$DATA2"}
+                <option value={$value.id}>{$value.nome}</option>
+            {/loop}
+        </select>
+
         <button type="submit">Salvar</button>
     </form>
 
+    
+
+    
     
 </body>
 </html>

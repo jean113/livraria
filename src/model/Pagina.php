@@ -20,9 +20,12 @@ class Pagina
         $this->tpl= new Tpl();
     }
 
-    public function criarPagina($nome, $dados = array())
+    public function criarPagina($nome, $dados = array(), $dados2 = array(), $dados3 = array())
     {
         $this->tpl->assign("DATA", $dados);
+        $this->tpl->assign("DATA2", $dados2);
+        $this->tpl->assign("DATA3", $dados3);
+        
         $this->tpl->draw($nome);
     }
 }

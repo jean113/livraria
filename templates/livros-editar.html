@@ -13,6 +13,28 @@
         <input type="text"  id="{$DATA.nome}" 
                 name="nome" placeholder="Digite o nome do livro" 
                 value="{$DATA.nome}">
+
+        <select id="autor" name="autor">
+            {loop="$DATA2"}  
+                {if="$DATA.autor_id ==  $value.id"}
+                    <option value={$value.id} selected>{$value.nome}</option>
+                {else}
+                    <option value={$value.id} >{$value.nome}</option>
+                {/if}  
+            {/loop}
+        </select>
+
+        <select id="editora" name="editora">
+            {loop="$DATA3"}
+                {if="$DATA.editora_id ==  $value.id"}
+                    <option value={$value.id} selected>{$value.nome}</option>
+                {else}
+                    <option value={$value.id} >{$value.nome}</option>
+                {/if}  
+            {/loop}
+        </select>
+
+
         <button type="submit">Editar</button>
     </form>
     
