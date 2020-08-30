@@ -1,17 +1,12 @@
 <?php
 
     require_once("src/model/Pagina.php");
-    require_once("src/model/BD.php");
+    require_once("src/model/Livro.php");
 
     $app->get('/', function() 
     {
-        $bd = new BD();
-        $resultados = $bd->select("SELECT l.nome AS livro, a.nome AS autor, e.nome AS editora FROM livro l 
-                                    INNER JOIN autor a ON a.id = l.autor_id
-                                    INNER JOIN editora e ON e.id = l.editora_id	");
 
-        
-
+        $resultados = Livro::livraria();
         $pagina = new Pagina();
         $pagina->criarPagina("index", $resultados);
         

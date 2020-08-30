@@ -1,59 +1,48 @@
 <?php
 
 require_once("src/model/Pagina.php");
-require_once("src/model/BD.php");
+require_once("src/model/Livro.php");
+require_once("src/model/Autor.php");
+require_once("src/model/Editora.php");
 
-$app->get('/livros', function() 
+$app->get('/livros', function() //ok
 {
     
-    $bd = new BD();
-    $resultados = $bd->select("SELECT * FROM livro");
+    $resultados = Livro::listar();
 
     $pagina = new Pagina(true);
     $pagina->criarPagina("livros", $resultados);
     
 });
 
-$app->get('/livros/criar', function() 
+$app->get('/livros/criar', function() //ok
 {
-    $bd = new BD();
-
-    $resultados = $bd->select("SELECT * FROM autor ORDER BY nome");
-
-    $resultados2 = $bd->select("SELECT * FROM editora ORDER BY nome");
-
-
     $pagina = new Pagina();
-    $pagina->criarPagina("livros-criar",$resultados, $resultados2);
+    $pagina->criarPagina("livros-criar", Autor::listar(), Editora::listar());
 
 });
 
-$app->post('/livros/criar', function() 
+$app->post('/livros/criar', function() //ok
 {
 
-    $nome = $_POST["nome"];
-    $editora_id = $_POST["editora"];
-    $autor_id = $_POST["autor"];
-    
-    $bd = new BD();
+    $livro = new Livro();
 
-    $bd->query("INSERT INTO livro(nome, editora_id, autor_id) 
-                VALUES (:NOME, :EDITORA_ID, :AUTOR_ID)",  
-                array(":NOME" => $nome,
-                    ":EDITORA_ID" => $editora_id,
-                    ":AUTOR_ID" => $autor_id,
-            ));
+    $livro->setNome($_POST["nome"]);
+    $livro->setEditoraID($_POST["editora"]);
+    $livro->setAutorID($_POST["autor"]);
+
+    $livro->inserir();
 
     header("Location: /livros");
     exit;
     
 });
 
-$app->get('/livros/:id/apagar', function($id) 
+$app->get('/livros/:id/apagar', function($id) //opk
 {
 
-    $bd = new BD();
-    $bd->query("DELETE FROM livro WHERE id = :ID ",  array(":ID" => $id));
+    $livro = new Livro();
+    $livro->apagar($id);
 
     header("Location: /livros");
     exit;
@@ -61,40 +50,27 @@ $app->get('/livros/:id/apagar', function($id)
 });
 
 //PAGINA EDITAR
-$app->get('/livros/:id', function($id) 
+$app->get('/livros/:id', function($id) //ok
 {
-    
-    $bd = new BD();
 
-    $resultados = $bd->select("SELECT * FROM livro WHERE id = :ID", array(":ID" => $id));
-
-    $resultados2 = $bd->select("SELECT * FROM autor");
-
-    $resultados3 = $bd->select("SELECT * FROM editora");
-    
+    $livro = new Livro();
+    $livro->recuperar($id);
     
     $pagina = new Pagina();
-    $pagina->criarPagina("livros-editar", $resultados[0], $resultados2 , $resultados3 );
+    $pagina->criarPagina("livros-editar", $livro->getValores(), Autor::listar() , Editora::listar());
 
 });
 
 //ROTA ONDE SERÀ FEITA A EDICAO
 $app->post('/livros/:id', function($id) 
 {
-    $nome = $_POST["nome"];
-    $editora_id = $_POST["editora"];
-    $autor_id = $_POST["autor"];
+    $livro = new Livro();
+    
+    $livro->setNome($_POST["nome"]);
+    $livro->setEditoraID($_POST["editora"]);
+    $livro->setAutorID($_POST["autor"]);
 
-    $bd = new BD();
-    $bd->query("UPDATE livro SET nome = :NOME, 
-                                 editora_id = :EDITORA_ID, 
-                                 autor_id = :AUTOR_ID 
-                WHERE id = :ID ", 
-
-        array(":NOME"=> $nome,
-            ":EDITORA_ID"=> $editora_id,
-            ":AUTOR_ID"=> $autor_id,
-            ":ID" => $id));
+    $livro->editar($id);
 
     header("Location: /livros");
     exit;  
