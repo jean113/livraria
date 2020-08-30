@@ -8,6 +8,8 @@
 <body>
 
     <h1>Editar Livros</h1>
+
+    <a href="/livros">Voltar</a>
     
     <form action="/livros/<?php echo htmlspecialchars( $DATA["id"], ENT_COMPAT, 'UTF-8', FALSE ); ?>" method="post">
         <input type="text"  id="<?php echo htmlspecialchars( $DATA["nome"], ENT_COMPAT, 'UTF-8', FALSE ); ?>" 

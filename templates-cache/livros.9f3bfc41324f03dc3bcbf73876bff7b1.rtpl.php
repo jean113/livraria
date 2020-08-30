@@ -9,6 +9,9 @@
 
     <h1>Visualizar de Livros</h1>
 
+
+    <a href="/painel">Voltar</a>
+
     <div>
         <a href="/livros/criar">Adicionar livro</a>
         <table>

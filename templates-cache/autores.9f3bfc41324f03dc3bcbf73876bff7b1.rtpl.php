@@ -9,6 +9,8 @@
 
     <h1>Visualizar de Autores</h1>
 
+    <a href="/painel">Voltar</a>
+
     <div>
         <a href="/autores/criar">Adicionar autor</a>
         <table>

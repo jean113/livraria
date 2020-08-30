@@ -9,7 +9,7 @@ $app->get('/editoras', function()
     $bd = new BD();
     $resultados = $bd->select("SELECT * FROM editora");
 
-    $pagina = new Pagina();
+    $pagina = new Pagina(true);
     $pagina->criarPagina("editoras", $resultados);
     
 });

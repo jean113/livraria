@@ -9,6 +9,8 @@
 
     <h1>Visualizar de Editoras</h1>
 
+    <a href="/painel">Voltar</a>
+
     <div>
         <a href="/editoras/criar">Adicionar editora</a>
         <table>

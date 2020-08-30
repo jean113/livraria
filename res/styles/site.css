@@ -1,0 +1,164 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;700&display=swap');
+
+
+html
+{
+    box-sizing: border-box;
+
+    font-size:60%;
+
+    --color-background: #5840BB;
+    --color-background-secundary: #fff;
+
+    --color-text-link: #fff;
+    --color-text-link-secundary:#5840BB;
+
+    --color-text-primary:#5840BB;
+
+    --color-text-header: #42427D;
+
+    --color-text-input:rgba(89, 64, 187, 0.5);
+
+    --color-background-button: #2E64FE;
+    --color-background-button-darker:#0040FF;
+
+}
+
+body
+{
+    font: 400 1.6rem Noto Sans, sans-serif ;
+    color: var(-color-text-primary);
+    background-color: var(--color-background);
+    -webkit-font-smoothing: antialiased;
+}
+
+header
+{
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+a
+{
+    font-weight: 700;
+    color:var(--color-text-link-secundary);
+    text-decoration:none;
+}
+
+a:hover
+{
+    color: var(--color-text-link-secundary);
+    background-color: var(--color-background-secundary);
+  
+}
+
+.conteudo
+{
+    background-color: var(--color-background-secundary);
+}
+
+.conteudo h1
+{
+    color: var(--color-text-header);
+}
+
+.conteudo table
+{
+    color: var(--color-text-header);
+}
+
+.conteudo th
+{
+    color: var(--color-text-header);
+}
+
+.botao_cadastrar
+{
+    font-size:1.7rem;
+    color: var(--color-text-link);
+    background-color: var(--color-background-button);
+    border-radius:5px;
+    padding:10px;
+    text-decoration: none;
+    transition: background-color 0.25s; 
+    border:none;
+    cursor:pointer;
+}
+
+.botao_cadastrar:hover
+{
+    background-color: var(--color-background-button-darker);
+}
+
+input
+{
+    border-color: var(--color-text-input);
+    padding: 0.7rem;
+    color: var(--color-text-primary);
+    font-size:1.8rem;
+    border-radius:5px;
+}
+
+select
+{
+    border-color: var(--color-text-input);
+    padding: 0.7rem;
+    color: var(--color-text-primary);
+    font-size:1.8rem;
+    border-radius:5px;
+}
+
+ul
+{
+    list-style: none;
+    color: var(--color-text-primary);
+
+}
+
+li
+{
+    margin: 10px;
+}
+
+li b
+{
+    color: var(--color-text-header);
+}
+
+
+
+@media(min-width: 700px)
+{
+    html
+    {
+        font-size:62.5%;    
+    }
+
+    .conteudo
+    {
+        padding:35px;
+        height:38vw;
+        border-radius: 8px;
+    }
+
+    input
+    {
+        width:30rem;
+    } 
+
+    select
+    {
+        width:30rem;
+    } 
+
+    ul
+    {     
+        display:grid;
+        grid-template-columns: repeat(5, 1fr); 
+
+    }  
+
+    
+
+}

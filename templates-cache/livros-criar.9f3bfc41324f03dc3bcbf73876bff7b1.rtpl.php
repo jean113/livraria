@@ -9,6 +9,8 @@
 
     <h1>Cadastro de Livros</h1>
 
+    <a href="/livros">Voltar</a>
+
     <form role="form" action="/livros/criar" method="post">
 
         <input type="text" name="nome" placeHolder="Nome do livro"/>

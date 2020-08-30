@@ -1,16 +1,10 @@
-<!DOCTYPE html>
-<html lang="pt-br">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Visualizar Editoras</title>
-</head>
-<body>
 
-    <h1>Visualizar de Editoras</h1>
+    
 
-    <div>
-        <a href="/editoras/criar">Adicionar editora</a>
+
+    <div class="conteudo">
+      <h1>Editoras</h1>
+        <a href="/editoras/criar" class="botao_cadastrar">Adicionar</a>
         <table>
             <thead>
               <tr>
@@ -25,8 +19,14 @@
                 <td>{$value.id}</td>
                 <td>{$value.nome}</td>
                 <td>
-                  <a href="/editoras/{$value.id}" > Editar</a>
-                  <a href="/editoras/{$value.id}/apagar" onclick="return confirm('Deseja realmente excluir este registro?')"> Excluir</a>
+                
+                  <a href="/editoras/{$value.id}" class="botao_cadastrar"> <i class="fa fa-edit fa-lg"></i> </a>
+                  
+                  <a href="/editoras/{$value.id}/apagar" class="botao_excluir" 
+                      onclick="return confirm('Deseja realmente excluir este registro?')">  
+                      <i class="fa fa-trash-o fa-lg"></i>
+                  </a>
+
                 </td>
               </tr>
               {/loop}

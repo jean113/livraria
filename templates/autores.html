@@ -1,16 +1,9 @@
-<!DOCTYPE html>
-<html lang="pt-br">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Visualizar Autores</title>
-</head>
-<body>
 
-    <h1>Visualizar de Autores</h1>
 
-    <div>
-        <a href="/autores/criar">Adicionar autor</a>
+
+    <div class="conteudo">
+      <h1>Autores</h1>
+        <a href="/autores/criar" class="botao_cadastrar">Adicionar</a>
         <table>
             <thead>
               <tr>
@@ -21,14 +14,24 @@
             </thead>
             <tbody>
               {loop="$DATA"}
+            
               <tr>
                 <td>{$value.id}</td>
                 <td>{$value.nome}</td>
                 <td>
-                  <a href="/autores/{$value.id}" > Editar</a>
-                  <a href="/autores/{$value.id}/apagar" onclick="return confirm('Deseja realmente excluir este registro?')"> Excluir</a>
+
+                  <a href="/autores/{$value.id}" class="botao_cadastrar"> <i class="fa fa-edit fa-lg"></i> </a>
+                  
+                  <a href="/autores/{$value.id}/apagar" class="botao_excluir" 
+                    onclick="return confirm('Deseja realmente excluir este registro?')">  
+                      
+                      <i class="fa fa-trash-o fa-lg"></i>  
+                  </a>
+
                 </td>
+    
               </tr>
+
               {/loop}
             </tbody>
           </table>

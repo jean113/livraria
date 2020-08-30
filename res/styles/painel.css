@@ -1,0 +1,171 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;700&display=swap');
+
+
+html
+{
+    box-sizing: border-box;
+
+    font-size:60%;
+
+    --color-background: #5840BB;
+    --color-background-secundary: #fff;
+
+    --color-text-link: #fff;
+    --color-text-link-secundary:#5840BB;
+    --color-text-primary:#5840BB;
+
+    --color-text-header: #42427D;
+
+    --color-background-button: #2E64FE;
+    --color-background-button-darker:#0040FF;
+
+    --color-background-button-secundary: #B40404;
+    --color-background-button-secundary-darker:#8A0808;
+
+    --color-line: #5840BB;
+
+
+}
+
+body
+{
+    font: 400 1.6rem Noto Sans, sans-serif ;
+    color: var(-color-text-primary);
+    background-color: var(--color-background);
+    -webkit-font-smoothing: antialiased;
+}
+
+.painel a
+{
+    font-weight: 700;
+    color:var(--color-text-link);
+    text-decoration:none;
+}
+
+.painel a:hover
+{
+    color: var(--color-text-link-secundary);
+    background-color: var(--color-background-secundary);
+  
+}
+
+.conteudo
+{
+    background-color: var(--color-background-secundary);
+}
+
+.conteudo h1
+{
+    color: var(--color-text-header);
+}
+
+.conteudo th
+{
+    color: var(--color-text-header);
+}
+
+.conteudo td
+{
+    color: var(--color-text-primary);
+}
+
+table
+{
+    border-collapse: collapse;
+}
+
+tbody > tr 
+{
+    border-bottom: 1px solid var(--color-line);
+}
+
+.botao_cadastrar
+{
+    font-size:1.3rem;
+    color: var(--color-text-link);
+    background-color: var(--color-background-button);
+    border-radius:5px;
+    padding:7px;
+    text-decoration: none;
+    transition: background-color 0.25s; 
+    border:none;
+    cursor:pointer;
+}
+
+.botao_cadastrar:hover
+{
+    background-color: var(--color-background-button-darker);
+}
+
+.botao_excluir
+{
+    font-size:1.3rem;
+    color: var(--color-text-link);
+    background-color: var(--color-background-button-secundary);
+    border-radius:5px;
+    padding:7px;
+    margin-left: 3px;
+    text-decoration: none;
+    transition: background-color 0.25s; 
+    cursor:pointer;
+}
+
+.botao_excluir:hover
+{
+    background-color: var(--color-background-button-secundary-darker);
+}
+
+
+@media(min-width: 700px)
+{
+    html
+    {
+        font-size:62.5%;    
+    }
+
+
+    body
+    {
+        display:grid;
+        grid-template-columns: 200px 1fr ;
+        grid-template-areas: "painel conteudo";
+    }
+
+    .conteudo
+    {
+        grid-area:conteudo;
+        padding:35px;
+        height:38vw;
+        max-width: 1140px;
+        border-radius: 8px;
+    }
+
+    .conteudo table
+    {
+        margin-top:15px;
+    }
+
+    .conteudo table td
+    {
+        padding:10px;
+        text-align: center;
+    }
+
+    .painel
+    {
+        margin-top:10rem;
+        grid-area:painel;
+        height: 100%;    
+    }
+
+    .painel a
+    {   
+        display:flex;
+        justify-content: space-evenly;
+        margin-top: 2rem;
+        border-radius: 5px;
+        padding: 1rem;
+    }
+
+
+}

@@ -1,16 +1,8 @@
-<!DOCTYPE html>
-<html lang="pt-br">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Visualizar Livros</title>
-</head>
-<body>
 
-    <h1>Visualizar de Livros</h1>
 
-    <div>
-        <a href="/livros/criar">Adicionar livro</a>
+    <div class="conteudo">
+        <h1> Livros</h1>
+        <a href="/livros/criar" class="botao_cadastrar">Adicionar</a>
         <table>
             <thead>
               <tr>
@@ -25,8 +17,18 @@
                 <td>{$value.id}</td>
                 <td>{$value.nome}</td>
                 <td>
-                  <a href="/livros/{$value.id}" > Editar</a>
-                  <a href="/livros/{$value.id}/apagar" onclick="return confirm('Deseja realmente excluir este registro?')"> Excluir</a>
+                  <div>
+                    
+                    <a href="/livros/{$value.id}" class="botao_cadastrar"> <i class="fa fa-edit fa-lg"></i> </a>
+                    
+                    <a href="/livros/{$value.id}/apagar" class="botao_excluir" 
+                        onclick="return confirm('Deseja realmente excluir este registro?')">  
+                        <i class="fa fa-trash-o fa-lg"></i>
+                      
+                    </a>
+
+
+                  </div> 
                 </td>
               </tr>
               {/loop}

@@ -9,6 +9,8 @@
 
     <h1>Cadastro de Editoras</h1>
 
+    <a href="/editoras">Voltar</a>
+
     <form role="form" action="/editoras/criar" method="post">
         <input type="text" name="nome" placeHolder="Nome do editora"/>
         <button type="submit">Salvar</button>

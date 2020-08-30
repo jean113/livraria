@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=<device-width>, initial-scale=1.0">
+        <link rel="stylesheet" href="../res/styles/site.css">
+    </head>
+<body>
+
+    
+    <div class="conteudo">
+
+        <header>
+            
+
+            <h1>Seja bem-vindo</h1>
+
+            <a href="/livros">Painel</a>
+        </header>
+
+       
+
+        <ul>
+            {loop="$DATA"}
+                <li>
+                    
+                    <b>Livro: </b> {$value.livro} <br/>
+                    <b>Autor: </b> {$value.autor}  <br/>
+                    <b>Editora: </b>{$value.editora} <br/>
+                   
+                </li>
+            {/loop}
+        </ul>
+
+
+
+    </div>
+</body>
+</html>

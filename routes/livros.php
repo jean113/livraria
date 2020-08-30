@@ -9,7 +9,7 @@ $app->get('/livros', function()
     $bd = new BD();
     $resultados = $bd->select("SELECT * FROM livro");
 
-    $pagina = new Pagina();
+    $pagina = new Pagina(true);
     $pagina->criarPagina("livros", $resultados);
     
 });

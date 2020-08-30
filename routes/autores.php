@@ -9,7 +9,7 @@ $app->get('/autores', function()
     $bd = new BD();
     $resultados = $bd->select("SELECT * FROM autor");
 
-    $pagina = new Pagina();
+    $pagina = new Pagina(true);
     $pagina->criarPagina("autores", $resultados);
     
 });
