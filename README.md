@@ -27,6 +27,7 @@ Site criado para uma livraria.
 
 
 <hr/>
+<p>
 <b>Ferramentas utilizadas:</b>
 <br/>
 <ul>
