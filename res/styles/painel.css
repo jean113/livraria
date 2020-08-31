@@ -29,7 +29,7 @@ html
 
 body
 {
-    font: 400 1.6rem Noto Sans, sans-serif ;
+    font: 400 1.1rem Noto Sans, sans-serif ;
     color: var(-color-text-primary);
     background-color: var(--color-background);
     -webkit-font-smoothing: antialiased;
@@ -52,26 +52,41 @@ body
 .conteudo
 {
     background-color: var(--color-background-secundary);
+    padding:10px;
+    height:100%;
+    border-radius: 8px;
+    margin-top: 3px;
 }
 
-.conteudo h1
+h1
 {
     color: var(--color-text-header);
 }
 
-.conteudo th
+th
 {
     color: var(--color-text-header);
 }
 
-.conteudo td
+td
 {
+    padding:2.5px;
     color: var(--color-text-primary);
+    text-align: center;
 }
+
 
 table
 {
+    margin-top:5px;
     border-collapse: collapse;
+}
+
+table div
+{
+    display:flex;
+    justify-content: left;
+    align-items: center;
 }
 
 tbody > tr 
@@ -81,16 +96,17 @@ tbody > tr
 
 .botao_cadastrar
 {
-    font-size:1.3rem;
+    font-size:1rem;
     color: var(--color-text-link);
     background-color: var(--color-background-button);
+    padding:2px;
     border-radius:5px;
-    padding:7px;
     text-decoration: none;
     transition: background-color 0.25s; 
     border:none;
     cursor:pointer;
 }
+
 
 .botao_cadastrar:hover
 {
@@ -99,12 +115,12 @@ tbody > tr
 
 .botao_excluir
 {
-    font-size:1.3rem;
+    font-size:1rem;
     color: var(--color-text-link);
     background-color: var(--color-background-button-secundary);
+    padding:2px;
     border-radius:5px;
-    padding:7px;
-    margin-left: 3px;
+    margin-left: 1px;
     text-decoration: none;
     transition: background-color 0.25s; 
     cursor:pointer;
@@ -126,30 +142,69 @@ tbody > tr
 
     body
     {
+        font-size:1.6rem;
         display:grid;
         grid-template-columns: 200px 1fr ;
         grid-template-areas: "painel conteudo";
     }
 
+    .botao_cadastrar
+    {
+        font-size:1.3rem;
+        color: var(--color-text-link);
+        background-color: var(--color-background-button);
+        border-radius:5px;
+        padding:7px;
+        text-decoration: none;
+        transition: background-color 0.25s; 
+        border:none;
+        cursor:pointer;
+    }
+
+    
+    .botao_excluir
+    {
+        font-size:1.3rem;
+        color: var(--color-text-link);
+        background-color: var(--color-background-button-secundary);
+        border-radius:5px;
+        padding:7px;
+        margin-left: 3px;
+        text-decoration: none;
+        transition: background-color 0.25s; 
+        cursor:pointer;
+    }
+
     .conteudo
     {
         grid-area:conteudo;
-        padding:35px;
-        height:38vw;
-        max-width: 1140px;
+        padding:20px;
+        height:100%;
         border-radius: 8px;
     }
 
-    .conteudo table
+    table
     {
         margin-top:15px;
     }
 
-    .conteudo table td
+    table div
     {
-        padding:10px;
+        display:block; 
+    }
+
+    td
+    {
+        padding:15px;
         text-align: center;
     }
+
+    th{
+        padding-left:15px;   
+        padding-right:15px;  
+    }
+
+    
 
     .painel
     {
@@ -166,6 +221,4 @@ tbody > tr
         border-radius: 5px;
         padding: 1rem;
     }
-
-
 }

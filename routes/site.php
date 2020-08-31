@@ -6,7 +6,7 @@
     $app->get('/', function() 
     {
 
-        $resultados = Livro::livraria();
+        $resultados = Livro::listar();
         $pagina = new Pagina();
         $pagina->criarPagina("index", $resultados);
         

@@ -26,7 +26,7 @@ html
 
 body
 {
-    font: 400 1.6rem Noto Sans, sans-serif ;
+    font: 400 1.1rem Noto Sans, sans-serif ;
     color: var(-color-text-primary);
     background-color: var(--color-background);
     -webkit-font-smoothing: antialiased;
@@ -38,6 +38,15 @@ header
     justify-content: space-between;
     align-items: center;
 }
+
+
+.campos
+{
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+}
+
 
 a
 {
@@ -56,39 +65,38 @@ a:hover
 .conteudo
 {
     background-color: var(--color-background-secundary);
+    padding:5px;
+    border-radius: 8px;
 }
 
-.conteudo h1
+h1
 {
     color: var(--color-text-header);
 }
 
-.conteudo table
-{
-    color: var(--color-text-header);
-}
-
-.conteudo th
-{
-    color: var(--color-text-header);
-}
 
 .botao_cadastrar
 {
-    font-size:1.7rem;
+    font-size:1.2rem;
     color: var(--color-text-link);
     background-color: var(--color-background-button);
     border-radius:5px;
-    padding:10px;
+    padding:7px;
     text-decoration: none;
     transition: background-color 0.25s; 
     border:none;
     cursor:pointer;
+    margin-top:10px;
 }
 
 .botao_cadastrar:hover
 {
     background-color: var(--color-background-button-darker);
+}
+
+label
+{
+    color:var(--color-text-header);  
 }
 
 input
@@ -98,6 +106,9 @@ input
     color: var(--color-text-primary);
     font-size:1.8rem;
     border-radius:5px;
+    display:block;
+    width: 86vw;
+    font-size:1.2rem;
 }
 
 select
@@ -105,10 +116,24 @@ select
     border-color: var(--color-text-input);
     padding: 0.7rem;
     color: var(--color-text-primary);
-    font-size:1.8rem;
+    font-size:1.2rem;
     border-radius:5px;
+    display:block;
+    width: 90vw;
 }
 
+textarea
+{
+   border-color: var(--color-text-input);
+   color: var(--color-text-primary);
+   font-size:1.2rem;
+   display:block;
+   width:88vw;
+   height: 15rem;
+   border-radius: 8px;
+   min-height: 8rem;
+   resize:vertical;
+}
 
 @media(min-width: 700px)
 {
@@ -117,20 +142,64 @@ select
         font-size:62.5%;    
     }
 
+    body{
+        font-size:1.6rem;
+    }
+
+    .botao_cadastrar
+    {
+        font-size:1.7rem;
+        padding:10px;
+    }
+
     .conteudo
     {
         padding:35px;
         height:38vw;
-        border-radius: 8px;
+        
     }
+
+    .campos
+    {
+        display:flex;
+        justify-content: left;
+        flex-direction: row;
+        flex-wrap: wrap;
+        width: 100%;
+    } 
 
     input
     {
-        width:30rem;
-    } 
+        width: 29vw;
+        font-size:1.8rem;
+    }
 
     select
+    {     
+        width:30.5vw;
+        font-size:1.8rem;
+    }
+
+    textarea
     {
-        width:30rem;
-    } 
+        font-size:1.8rem;
+        display:block;
+        width:92vw;
+        height: 15rem;
+        border-radius: 8px;
+        min-height: 8rem;
+        resize:vertical;   
+    }
+
+
+
+    input, select
+    {
+        margin-right:10px;   
+    }
+
+    input, select, textarea
+    {
+        margin-bottom: 5px;
+    }
 }

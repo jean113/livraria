@@ -3,37 +3,51 @@
     <div class="conteudo">
         <h1> Livros</h1>
         <a href="/livros/criar" class="botao_cadastrar">Adicionar</a>
-        <table>
-            <thead>
-              <tr>
-                <th style="width: 10px">#</th>
-                <th>Nome </th>
-                <th style="width: 140px">&nbsp;</th>
-              </tr>
-            </thead>
-            <tbody>
-              {loop="$DATA"}
-              <tr>
-                <td>{$value.id}</td>
-                <td>{$value.nome}</td>
-                <td>
-                  <div>
-                    
-                    <a href="/livros/{$value.id}" class="botao_cadastrar"> <i class="fa fa-edit fa-lg"></i> </a>
-                    
-                    <a href="/livros/{$value.id}/apagar" class="botao_excluir" 
-                        onclick="return confirm('Deseja realmente excluir este registro?')">  
-                        <i class="fa fa-trash-o fa-lg"></i>
+        {if="$DATA"}
+          <table>
+              <thead>
+                <tr>
+                  <th style="width: 10px">#</th>
+                  <th>Título </th>
+                  <th>Autor</th>
+                  <th>Editora</th>
+                  <th>Data de edição</th>
+                  <th>Páginas</th>
+                  <th>Tipo de impressão</th>
+                 
+                </tr>
+              </thead>
+              <tbody>
+                {loop="$DATA"}
+                <tr>
+                  <td>{$value.id}</td>
+                  <td>{$value.titulo}</td>
+                  <td>{$value.autor}</td>
+                  <td>{$value.editora}</td>
+                  <td>{$value.dt_edicao}</td>
+                  <td>{$value.paginas}</td>
+                  <td>{$value.impressao}</td>
+                 
+
+                  <td>
+                    <div>
                       
-                    </a>
+                      <a href="/livros/{$value.id}" class="botao_cadastrar"> <i class="fa fa-edit fa-lg"></i> </a>
+                      
+                      <a href="/livros/{$value.id}/apagar" class="botao_excluir" 
+                          onclick="return confirm('Deseja realmente excluir este registro?')">  
+                          <i class="fa fa-trash-o fa-lg"></i>
+                        
+                      </a>
 
 
-                  </div> 
-                </td>
-              </tr>
-              {/loop}
-            </tbody>
-          </table>
+                    </div> 
+                  </td>
+                </tr>
+                {/loop}
+              </tbody>
+            </table>
+          {/if}
     </div>
     
 </body>

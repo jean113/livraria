@@ -5,33 +5,40 @@
 
     class Livro extends Modelo
     {
-        public static function livraria():array
+        public static function listar():array
         {
             $bd = new BD();
             
-            return $bd->select("SELECT l.nome AS livro, a.nome AS autor, e.nome AS editora FROM livro l 
+            return $bd->select("SELECT l.id, l.titulo, DATE_FORMAT(l.dt_edicao,'%d/%m/%Y') as dt_edicao, 
+                                l.paginas, l.impressao, l.descricao,
+                                a.nome AS autor, e.nome AS editora FROM livro l 
                                 INNER JOIN autor a ON a.id = l.autor_id
                                 INNER JOIN editora e ON e.id = l.editora_id	");
         }
 
-        public static function listar():array
-        {
-            $bd = new BD();
-            return $bd->select("SELECT * FROM livro");
-        }
-
         public function inserir()
         {
+           
 
             $bd = new BD();
+
             try
             {
-                $bd->query("INSERT INTO livro(nome, editora_id, autor_id) 
-                VALUES (:NOME, :EDITORA_ID, :AUTOR_ID)",  
-                array(":NOME" => $this->getNome(),
+                /*var_dump($this);
+                die();*/
+                $bd->query("INSERT INTO livro(titulo, editora_id, autor_id, dt_edicao, paginas, impressao, descricao) 
+                VALUES (:TITULO, :EDITORA_ID, :AUTOR_ID, :DT_EDICAO, :PAGINAS,:IMPRESSAO, :DESCRICAO)",  
+
+                array(":TITULO" => $this->getTitulo(),
                     ":EDITORA_ID" => $this->getEditoraID(),
                     ":AUTOR_ID" => $this->getAutorID(),
+                    ":DT_EDICAO" =>  date($this->getDtEdicao()) ,
+                    ":PAGINAS" => $this->getPaginas(),
+                    ":IMPRESSAO" => $this->getImpressao(),
+                    ":DESCRICAO" => $this->getDescricao()
                 ));
+
+        
             }
             catch (Exception $e) {
 
@@ -74,7 +81,11 @@
             
             try
             {
-                $resultados =  $bd->select("SELECT * FROM livro WHERE id = :ID", array(":ID" => $id));
+                $resultados =  $bd->select("SELECT id, editora_id, autor_id,titulo, 
+                                        dt_edicao, 
+                                        paginas, impressao, descricao
+                     
+                 FROM livro WHERE id = :ID", array(":ID" => $id));
 
                 $this->setValores($resultados[0]);
                 
@@ -100,13 +111,19 @@
                    
             try
             {
-                $bd->query("UPDATE livro SET nome = :NOME, editora_id = :EDITORA_ID, autor_id = :AUTOR_ID 
-                            WHERE id = :ID ",  array(
-                                ":NOME"=> $this->getNome(),
-                                ":EDITORA_ID"=>  $this->getEditoraID(),
-                                ":AUTOR_ID"=> $this->getAutorID(),
-                                ":ID" => $id));
-                
+                $bd->query("UPDATE livro SET titulo = :TITULO, editora_id = :EDITORA_ID, autor_id = :AUTOR_ID, 
+                                             dt_edicao = :DT_EDICAO, paginas = :PAGINAS, impressao = :IMPRESSAO,
+                                             descricao = :DESCRICAO
+                            WHERE id = :ID ", 
+
+                                array(":TITULO" => $this->getTitulo(),
+                                    ":EDITORA_ID" => $this->getEditoraID(),
+                                    ":AUTOR_ID" => $this->getAutorID(),
+                                    ":DT_EDICAO" =>  date($this->getDtEdicao()) ,
+                                    ":PAGINAS" => $this->getPaginas(),
+                                    ":IMPRESSAO" => $this->getImpressao(),
+                                    ":DESCRICAO" => $this->getDescricao(),
+                                    ":ID" => $id) );             
             }
             catch (Exception $e) {
 

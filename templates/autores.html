@@ -4,37 +4,39 @@
     <div class="conteudo">
       <h1>Autores</h1>
         <a href="/autores/criar" class="botao_cadastrar">Adicionar</a>
-        <table>
-            <thead>
-              <tr>
-                <th style="width: 10px">#</th>
-                <th>Nome </th>
-                <th style="width: 140px">&nbsp;</th>
-              </tr>
-            </thead>
-            <tbody>
-              {loop="$DATA"}
-            
-              <tr>
-                <td>{$value.id}</td>
-                <td>{$value.nome}</td>
-                <td>
+        {if="$DATA"}
+          <table>
+              <thead>
+                <tr>
+                  <th style="width: 10px">#</th>
+                  <th>Nome </th>
+                  <th style="width: 140px">&nbsp;</th>
+                </tr>
+              </thead>
+              <tbody>
+                {loop="$DATA"}
+              
+                <tr>
+                  <td>{$value.id}</td>
+                  <td>{$value.nome}</td>
+                  <td>
 
-                  <a href="/autores/{$value.id}" class="botao_cadastrar"> <i class="fa fa-edit fa-lg"></i> </a>
-                  
-                  <a href="/autores/{$value.id}/apagar" class="botao_excluir" 
-                    onclick="return confirm('Deseja realmente excluir este registro?')">  
-                      
-                      <i class="fa fa-trash-o fa-lg"></i>  
-                  </a>
+                    <a href="/autores/{$value.id}" class="botao_cadastrar"> <i class="fa fa-edit fa-lg"></i> </a>
+                    
+                    <a href="/autores/{$value.id}/apagar" class="botao_excluir" 
+                      onclick="return confirm('Deseja realmente excluir este registro?')">  
+                        
+                        <i class="fa fa-trash-o fa-lg"></i>  
+                    </a>
 
-                </td>
-    
-              </tr>
+                  </td>
+      
+                </tr>
 
-              {/loop}
-            </tbody>
-          </table>
+                {/loop}
+              </tbody>
+            </table>
+          {/if}
     </div>
     
 </body>

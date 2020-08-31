@@ -18,9 +18,15 @@
         </header>
 
         <form action="/editoras/<?php echo $DATA["id"]; ?>" method="post">
-            <input type="text"  id="<?php echo $DATA["nome"]; ?>" 
-                    name="nome" placeholder="Digite o nome do editora" 
-                    value="<?php echo $DATA["nome"]; ?>">
+            <div class="campos">
+                <div>
+                    <label for="">Nome</label>
+                    <input type="text"  id="<?php echo $DATA["nome"]; ?>" 
+                            name="nome" placeholder="Digite o nome do editora" 
+                            value="<?php echo $DATA["nome"]; ?>">
+                </div>
+            </div>
+           
             <button type="submit" class="botao_cadastrar">Editar</button>
         </form>
     </div>

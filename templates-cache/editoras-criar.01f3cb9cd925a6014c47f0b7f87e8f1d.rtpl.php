@@ -21,7 +21,13 @@
         </header>
 
         <form role="form" action="/editoras/criar" method="post">
-            <input type="text" name="nome" placeHolder="Nome do editora" />
+            <div class="campos">
+                <div>
+                    <label for="">Nome</label>
+                    <input type="text" name="nome" placeHolder="Nome do editora" />
+                </div>
+            </div>
+            
             <button type="submit" class="botao_cadastrar">Salvar</button>
         </form>
 

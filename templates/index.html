@@ -24,10 +24,14 @@
             {loop="$DATA"}
                 <li>
                     
-                    <b>Livro: </b> {$value.livro} <br/>
+                    <b>Livro: </b> {$value.titulo} <br/>
                     <b>Autor: </b> {$value.autor}  <br/>
                     <b>Editora: </b>{$value.editora} <br/>
-                   
+                    <b>Data de edição: </b>{$value.dt_edicao} <br/>
+                    <b>Páginas: </b> {$value.paginas} <br/>
+                    <b>Tipo de impressão: </b> {$value.impressao}  <br/>
+                    <b>Descrição: </b>{$value.descricao} <br/>
+                            
                 </li>
             {/loop}
         </ul>

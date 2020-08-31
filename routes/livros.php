@@ -24,14 +24,22 @@ $app->get('/livros/criar', function() //ok
 
 $app->post('/livros/criar', function() //ok
 {
+    
 
+    
     $livro = new Livro();
 
-    $livro->setNome($_POST["nome"]);
+    $livro->setTitulo($_POST["titulo"]);
     $livro->setEditoraID($_POST["editora"]);
     $livro->setAutorID($_POST["autor"]);
+    $livro->setDtEdicao($_POST["dtEdicao"]);
+    $livro->setPaginas($_POST["paginas"]);
+    $livro->setImpressao($_POST["impressao"]);
+    $livro->setDescricao($_POST["descricao"]);
+
 
     $livro->inserir();
+
 
     header("Location: /livros");
     exit;
@@ -66,9 +74,13 @@ $app->post('/livros/:id', function($id)
 {
     $livro = new Livro();
     
-    $livro->setNome($_POST["nome"]);
+    $livro->setTitulo($_POST["titulo"]);
     $livro->setEditoraID($_POST["editora"]);
     $livro->setAutorID($_POST["autor"]);
+    $livro->setDtEdicao($_POST["dtEdicao"]);
+    $livro->setPaginas($_POST["paginas"]);
+    $livro->setImpressao($_POST["impressao"]);
+    $livro->setDescricao($_POST["descricao"]);
 
     $livro->editar($id);
 

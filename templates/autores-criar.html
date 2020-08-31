@@ -21,7 +21,13 @@
         
 
         <form role="form" action="/autores/criar" method="post">
-            <input type="text" name="nome" placeHolder="Nome do Autor"/>
+            <div class="campo">
+                <div>
+                    <label for="">Nome</label>
+                    <input type="text" name="nome" placeHolder="Nome do Autor"/>
+                </div>
+            </div>
+            
             <button type="submit" class="botao_cadastrar">Salvar</button>
         </form>
 

@@ -19,30 +19,82 @@
         </header>
 
         <form action="/livros/{$DATA.id}" method="post">
-            <input type="text"  id="{$DATA.nome}" 
-                    name="nome" placeholder="Digite o nome do livro" 
-                    value="{$DATA.nome}">
+
+           <div class="campos">
+
+                <div>
+
+                    <label for="">Título</label>
+                    <input type="text"  id="{$DATA.titulo}" 
+                            name="titulo" placeholder="Nome do livro" 
+                            value="{$DATA.titulo}" required>
+
+                </div>
+
+                <div>
+
+                    <label for="">Autor</label>
+                    <select id="autor" name="autor" required>
+                        {loop="$DATA2"}  
+                            {if="$DATA.autor_id ==  $value.id"}
+                                <option value={$value.id} selected>{$value.nome}</option>
+                            {else}
+                                <option value={$value.id} >{$value.nome}</option>
+                            {/if}  
+                        {/loop}
+                    </select>
+
+                </div>
+
+                <div>
+
+                    <label for="">Editora</label>
+                    <select id="editora" name="editora" required>
+                        {loop="$DATA3"}
+                            {if="$DATA.editora_id ==  $value.id"}
+                                <option value={$value.id} selected>{$value.nome}</option>
+                            {else}
+                                <option value={$value.id} >{$value.nome}</option>
+                            {/if}  
+                        {/loop}
+                    </select>
+
+                </div>
+
+
+                <div>
+
+                    <label for="">Data da edição</label>
+                    <input value="{$DATA.dt_edicao}" type="date" name="dtEdicao" required/>
+
+                </div>
     
-            <select id="autor" name="autor">
-                {loop="$DATA2"}  
-                    {if="$DATA.autor_id ==  $value.id"}
-                        <option value={$value.id} selected>{$value.nome}</option>
-                    {else}
-                        <option value={$value.id} >{$value.nome}</option>
-                    {/if}  
-                {/loop}
-            </select>
-    
-            <select id="editora" name="editora">
-                {loop="$DATA3"}
-                    {if="$DATA.editora_id ==  $value.id"}
-                        <option value={$value.id} selected>{$value.nome}</option>
-                    {else}
-                        <option value={$value.id} >{$value.nome}</option>
-                    {/if}  
-                {/loop}
-            </select>
-    
+            
+                <div>
+
+                    <label for="">Páginas</label>
+                    <input value="{$DATA.paginas}" type="number" name="paginas" placeHolder="Quantidade de páginas"/>
+
+                </div>
+
+                <div>
+
+                    <label for="">Tipo de Impressão</label>
+                    <input value="{$DATA.impressao}" type="text" name="impressao" placeHolder="Tipo de impressão" maxlength="15"/>
+
+                </div>
+
+                <div>
+
+                    <label for="">Descrição</label>
+                    <textarea name="descricao" placeHolder="Quantidade de páginas"> {$DATA.descricao} </textarea>
+
+
+                </div>
+            
+
+              
+           </div>
     
             <button type="submit" class="botao_cadastrar">Editar</button>
     </div>
