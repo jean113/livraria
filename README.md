@@ -1,26 +1,35 @@
 ﻿# Livraria
-Site para visualização e cadastro de livros.
+Site criado para uma livraria.
 
 <p>
-Desenvolvi esse aplicativo com o intuito de aplicar meus estudos em relação ao Node JS e ao React JS.
-Criei um book search que permite ao usuário fazer uma busca por livros a partir do título e/ou do autor da obra.</br>
-
-O projeto foi dividido em duas partes: </br>
-<ul>
-  <li>O backend - responsável por receber os parâmetros passados, enviar para o google api book que fará a pesquisa, receber e mandar a resposta para o frontend.</li>
-  <li>O frontend - tela de pesquisa onde o usuário vai digitar o que busca, enviar para o backend e apresentar o resultado final.</li>
-</ul>
-O projeto não teve dificuldades, mas, um desafio interessante para se mencionar foi criar uma estratégia para separar os parâmetros do usuário 
-(que vem como uma única string) em título e autor e montar a url.
-</p>
-
-<p>
-Este aplicativo está disponível no GitHub: https://github.com/jean113/livraria
+  Este site é divido em duas partes:
+  
+  <ol>
+    <li>
+      Visualização todas os livros com as informações a eles atreladas. 
+    </li>
+    <li>
+      Painel onde é possível cadastrar, editar, excluir e visualizar os livros cadastrados, assim como seus autores e editoras.
+    </li>
+  </ol>
+  
 </p>
 
 <hr/>
-<b>Ferramentas utilizadas:</b>
 
+<p>
+
+<b>Preview</b></br>
+<img src = "" />
+
+</p>
+
+
+
+<hr/>
+<p>
+<b>Ferramentas utilizadas:</b>
+<br/>
 <ul>
   <li>Visual Studio Code</li>
   <li>Linguagem PHP </li>
@@ -37,43 +46,23 @@ Este aplicativo está disponível no GitHub: https://github.com/jean113/livraria
 <hr/>
 
 <p>
-
-<b>Preview</b></br>
-<img src = "https://github.com/jean113/book/blob/master/frontend/src/assets/apresentacao.gif" />
-
-</p>
-
-<hr/>
-
-<p>
-<b>Requisitos:</b><br/>
-<ul>Para baixar e rodar esta aplicação, você precisará  do Git, Node.js v12.16.1 ou superior.</ul>
-</p>
-
-<hr/>
-
-<p>
-<b>Como usar:</b><br/>
+<b>Requisitos:</b>
+<br/>  
 <ul>
+  <li>Git - para baixar os arquivos para o computador</li>
+  <li>Xampp - para instalar Apache, PHP e MySQL</li>
+  <li>Workbench MySQL</li>
+  
+</ul>
+</p>
 
-Baixar repositório</br>
-$ git clone https://github.com/jean113/book.git</br>
+<hr/>
 
-Através de um prompt de comando:
-
-#Entrar na pasta raiz do projeto </br>
-$ npm install -g yarn
-
-#Entrar na pasta do backend</br>
-$ yarn install
-$ yarn start
-
-#Entrar na pasta do frontend</br>
-$ yarn install
-$ yarn start
+<p>
+<b>Como rodar:</b><br/>
+<ul>
 
 </ul>
 
-Lembrando que os comandos npm e yarn podem ser executados no terminal do Visual Studio Code
 </p>
 
