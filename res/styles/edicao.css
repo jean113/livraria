@@ -124,15 +124,16 @@ select
 
 textarea
 {
+   font: 400 1.2rem Noto Sans, sans-serif; 
    border-color: var(--color-text-input);
    color: var(--color-text-primary);
-   font-size:1.2rem;
    display:block;
    width:88vw;
    height: 15rem;
    border-radius: 8px;
    min-height: 8rem;
    resize:vertical;
+   padding: 0.7rem;
 }
 
 @media(min-width: 700px)

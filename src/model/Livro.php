@@ -24,8 +24,7 @@
 
             try
             {
-                /*var_dump($this);
-                die();*/
+               
                 $bd->query("INSERT INTO livro(titulo, editora_id, autor_id, dt_edicao, paginas, impressao, descricao) 
                 VALUES (:TITULO, :EDITORA_ID, :AUTOR_ID, :DT_EDICAO, :PAGINAS,:IMPRESSAO, :DESCRICAO)",  
 
@@ -82,7 +81,7 @@
             try
             {
                 $resultados =  $bd->select("SELECT id, editora_id, autor_id,titulo, 
-                                        dt_edicao, 
+                                        DATE_FORMAT(dt_edicao,'%Y-%m-%d') as dt_edicao, 
                                         paginas, impressao, descricao
                      
                  FROM livro WHERE id = :ID", array(":ID" => $id));

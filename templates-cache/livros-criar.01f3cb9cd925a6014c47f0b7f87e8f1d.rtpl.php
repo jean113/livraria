@@ -67,7 +67,7 @@
     
                 <div>
                     <label for="">Descrição</label>
-                    <textarea name="descricao" placeHolder="Quantidade de páginas"></textarea>
+                    <textarea name="descricao" placeHolder="Descrição" maxlength="200"></textarea>
     
                 </div>
 

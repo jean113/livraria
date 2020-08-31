@@ -87,7 +87,7 @@
                 <div>
 
                     <label for="">Descrição</label>
-                    <textarea name="descricao" placeHolder="Quantidade de páginas"> <?php echo $DATA["descricao"]; ?> </textarea>
+                    <textarea name="descricao" placeHolder="Descrição"  maxlength="200"> <?php echo $DATA["descricao"]; ?> </textarea>
 
 
                 </div>

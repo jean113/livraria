@@ -63,6 +63,8 @@ $app->get('/livros/:id', function($id) //ok
 
     $livro = new Livro();
     $livro->recuperar($id);
+
+    
     
     $pagina = new Pagina();
     $pagina->criarPagina("livros-editar", $livro->getValores(), Autor::listar() , Editora::listar());
