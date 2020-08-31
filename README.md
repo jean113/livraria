@@ -15,10 +15,6 @@ Site criado para uma livraria.
   
 </p>
 
-<p>
-Este aplicativo está disponível no GitHub: https://github.com/jean113/livraria
-</p>
-
 <hr/>
 <b>Ferramentas utilizadas:</b>
 
