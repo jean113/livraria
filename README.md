@@ -16,6 +16,17 @@ Site criado para uma livraria.
 </p>
 
 <hr/>
+
+<p>
+
+<b>Preview</b></br>
+<img src = "" />
+
+</p>
+
+
+
+<hr/>
 <b>Ferramentas utilizadas:</b>
 
 <ul>
@@ -28,15 +39,6 @@ Site criado para uma livraria.
   <li>Composer para gerenciar as dependências</li>
   <li>DBDesigner4 para modelar o banco de dados</li>
 </ul>
-
-</p>
-
-<hr/>
-
-<p>
-
-<b>Preview</b></br>
-<img src = "" />
 
 </p>
 
