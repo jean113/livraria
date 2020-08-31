@@ -47,7 +47,12 @@ Este aplicativo está disponível no GitHub: https://github.com/jean113/livraria
 
 <p>
 <b>Requisitos:</b><br/>
-<ul>Para baixar e rodar esta aplicação, você precisará  do Git, Node.js v12.16.1 ou superior.</ul>
+<ul>
+  <li>Git - para baixar os arquivos para o computador</li>
+  <li>Xampp - para instalar Apache, PHP e MySQL</li>
+  <li>Workbench MySQL</li>
+  
+</ul>
 </p>
 
 <hr/>
@@ -56,24 +61,7 @@ Este aplicativo está disponível no GitHub: https://github.com/jean113/livraria
 <b>Como usar:</b><br/>
 <ul>
 
-Baixar repositório</br>
-$ git clone https://github.com/jean113/book.git</br>
-
-Através de um prompt de comando:
-
-#Entrar na pasta raiz do projeto </br>
-$ npm install -g yarn
-
-#Entrar na pasta do backend</br>
-$ yarn install
-$ yarn start
-
-#Entrar na pasta do frontend</br>
-$ yarn install
-$ yarn start
-
 </ul>
 
-Lembrando que os comandos npm e yarn podem ser executados no terminal do Visual Studio Code
 </p>
 
