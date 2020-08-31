@@ -16,7 +16,7 @@
 
             <h1>Cadastro de Autores</h1>
 
-            <a href="/autores">Voltar</a>
+            <a href="/autores"><i class="fa fa-arrow-left"></i>Voltar</a>
 
         </header>
         

@@ -4,6 +4,7 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=<device-width>, initial-scale=1.0">
         <link rel="stylesheet" href="../res/styles/site.css">
+        <link rel="stylesheet" href="../res/styles/font-awesome/css/font-awesome.min.css">
     </head>
 <body>
 
@@ -15,7 +16,7 @@
 
             <h1>Seja bem-vindo</h1>
 
-            <a href="/livros">Painel</a>
+            <a href="/login"> <i class="fa fa-sign-in"> </i>Login</a>
         </header>
 
        

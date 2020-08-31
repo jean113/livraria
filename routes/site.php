@@ -12,13 +12,5 @@
         
     });
 
-    $app->get('/painel', function() 
-    {
-        $pagina = new Pagina();
-        $pagina->criarPagina("painel");
-        
-    });
-
-
 ?>
 

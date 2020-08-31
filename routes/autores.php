@@ -5,6 +5,13 @@ require_once("src/model/Autor.php");
 
 $app->get('/autores', function()
 {
+    if (Usuario::verificarSessao() != true)
+    {
+        header("Location: /login");
+        exit;        
+    }
+
+
     $resultados = Autor::listar();
     
     $pagina = new Pagina(true);
@@ -15,6 +22,12 @@ $app->get('/autores', function()
 $app->get('/autores/criar', function()
 {
 
+    if (Usuario::verificarSessao() != true)
+    {
+        header("Location: /login");
+        exit;        
+    }
+
     $pagina = new Pagina();
     $pagina->criarPagina("autores-criar");
 
@@ -23,6 +36,12 @@ $app->get('/autores/criar', function()
 $app->post('/autores/criar', function() 
 {
 
+    if (Usuario::verificarSessao() != true)
+    {
+        header("Location: /login");
+        exit;        
+    }
+    
     $autor = new Autor();
     $autor->setNome($_POST["nome"]);
 
@@ -35,6 +54,13 @@ $app->post('/autores/criar', function()
 
 $app->get('/autores/:id/apagar', function($id) 
 {
+    
+    if (Usuario::verificarSessao() != true)
+    {
+        header("Location: /login");
+        exit;        
+    }
+    
     $autor = new Autor();
     $autor->apagar($id);
 
@@ -46,6 +72,13 @@ $app->get('/autores/:id/apagar', function($id)
 //PAGINA EDITAR
 $app->get('/autores/:id', function($id) 
 {
+    
+    if (Usuario::verificarSessao() != true)
+    {
+        header("Location: /login");
+        exit;        
+    }
+    
     
     $autor = new Autor();
     $autor->recuperar($id);
@@ -59,6 +92,12 @@ $app->get('/autores/:id', function($id)
 $app->post('/autores/:id', function($id) 
 {
 
+    if (Usuario::verificarSessao() != true)
+    {
+        header("Location: /login");
+        exit;        
+    }
+    
     $autor = new Autor();
     $autor->setNome($_POST["nome"]);
 

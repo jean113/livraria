@@ -6,6 +6,12 @@ require_once("src/model/Editora.php");
 $app->get('/editoras', function() 
 {
     
+    if (Usuario::verificarSessao() != true)
+    {
+        header("Location: /login");
+        exit;        
+    }
+    
     $resultados = Editora::listar();
 
     $pagina = new Pagina(true);
@@ -16,6 +22,12 @@ $app->get('/editoras', function()
 $app->get('/editoras/criar', function() 
 {
 
+    if (Usuario::verificarSessao() != true)
+    {
+        header("Location: /login");
+        exit;        
+    }
+    
     $pagina = new Pagina();
     $pagina->criarPagina("editoras-criar");
 
@@ -24,6 +36,12 @@ $app->get('/editoras/criar', function()
 $app->post('/editoras/criar', function() 
 {
 
+    if (Usuario::verificarSessao() != true)
+    {
+        header("Location: /login");
+        exit;        
+    }
+    
     $editora = new Editora();
     $editora->setNome($_POST["nome"]);
 
@@ -38,6 +56,12 @@ $app->post('/editoras/criar', function()
 $app->get('/editoras/:id/apagar', function($id) 
 {
 
+    if (Usuario::verificarSessao() != true)
+    {
+        header("Location: /login");
+        exit;        
+    }
+    
     $editora = new Editora();
     $editora->apagar($id);
 
@@ -49,6 +73,12 @@ $app->get('/editoras/:id/apagar', function($id)
 //PAGINA EDITAR
 $app->get('/editoras/:id', function($id) 
 {
+    
+    if (Usuario::verificarSessao() != true)
+    {
+        header("Location: /login");
+        exit;        
+    }
     
     $editora = new Editora();
     $editora->recuperar($id);
@@ -62,6 +92,12 @@ $app->get('/editoras/:id', function($id)
 //ROTA ONDE SERÀ FEITA A EDICAO
 $app->post('/editoras/:id', function($id) 
 {
+    if (Usuario::verificarSessao() != true)
+    {
+        header("Location: /login");
+        exit;        
+    }
+    
     $editora = new Editora();
     $editora->setNome($_POST["nome"]);
 

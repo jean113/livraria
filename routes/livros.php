@@ -8,6 +8,12 @@ require_once("src/model/Editora.php");
 $app->get('/livros', function() //ok
 {
     
+    if (Usuario::verificarSessao() != true)
+    {
+        header("Location: /login");
+        exit;        
+    }
+    
     $resultados = Livro::listar();
 
     $pagina = new Pagina(true);
@@ -17,6 +23,13 @@ $app->get('/livros', function() //ok
 
 $app->get('/livros/criar', function() //ok
 {
+    
+    if (Usuario::verificarSessao() != true)
+    {
+        header("Location: /login");
+        exit;        
+    }
+    
     $pagina = new Pagina();
     $pagina->criarPagina("livros-criar", Autor::listar(), Editora::listar());
 
@@ -26,6 +39,12 @@ $app->post('/livros/criar', function() //ok
 {
     
 
+    if (Usuario::verificarSessao() != true)
+    {
+        header("Location: /login");
+        exit;        
+    }
+    
     
     $livro = new Livro();
 
@@ -49,6 +68,12 @@ $app->post('/livros/criar', function() //ok
 $app->get('/livros/:id/apagar', function($id) //opk
 {
 
+    if (Usuario::verificarSessao() != true)
+    {
+        header("Location: /login");
+        exit;        
+    }
+    
     $livro = new Livro();
     $livro->apagar($id);
 
@@ -61,6 +86,12 @@ $app->get('/livros/:id/apagar', function($id) //opk
 $app->get('/livros/:id', function($id) //ok
 {
 
+    if (Usuario::verificarSessao() != true)
+    {
+        header("Location: /login");
+        exit;        
+    }
+    
     $livro = new Livro();
     $livro->recuperar($id);
 
@@ -74,6 +105,13 @@ $app->get('/livros/:id', function($id) //ok
 //ROTA ONDE SERÀ FEITA A EDICAO
 $app->post('/livros/:id', function($id) 
 {
+    
+    if (Usuario::verificarSessao() != true)
+    {
+        header("Location: /login");
+        exit;        
+    }
+    
     $livro = new Livro();
     
     $livro->setTitulo($_POST["titulo"]);

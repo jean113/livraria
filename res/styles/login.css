@@ -1,0 +1,206 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;700&display=swap');
+
+
+html
+{
+    box-sizing: border-box;
+
+    font-size:60%;
+
+    --color-background: #5840BB;
+    --color-background-secundary: #fff;
+
+    --color-text-link: #fff;
+    --color-text-link-secundary:#5840BB;
+
+    --color-text-primary:#5840BB;
+
+    --color-text-header: #42427D;
+
+    --color-text-input:rgba(89, 64, 187, 0.5);
+
+    --color-background-button: #2E64FE;
+    --color-background-button-darker:#0040FF;
+
+}
+
+body
+{
+    font: 400 1.1rem Noto Sans, sans-serif ;
+    color: var(-color-text-primary);
+    background-color: var(--color-background);
+    -webkit-font-smoothing: antialiased;
+}
+
+header
+{
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+.campos
+{
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+a
+{
+    font-weight: 700;
+    color:var(--color-text-link-secundary);
+    text-decoration:none;
+}
+
+a:hover
+{
+    color: var(--color-text-link-secundary);
+    background-color: var(--color-background-secundary);
+  
+}
+
+.conteudo
+{
+    background-color: var(--color-background-secundary);
+    padding:5px;
+    border-radius: 8px;
+}
+
+h1
+{
+    color: var(--color-text-header);
+}
+
+
+.botao_cadastrar
+{
+    font-size:1.2rem;
+    color: var(--color-text-link);
+    background-color: var(--color-background-button);
+    border-radius:5px;
+    padding:7px;
+    text-decoration: none;
+    transition: background-color 0.25s; 
+    border:none;
+    cursor:pointer;
+    margin-top:10px;
+}
+
+.botao_cadastrar:hover
+{
+    background-color: var(--color-background-button-darker);
+}
+
+label
+{
+    color:var(--color-text-header);  
+}
+
+input
+{
+    border-color: var(--color-text-input);
+    padding: 0.7rem;
+    color: var(--color-text-primary);
+    font-size:1.8rem;
+    border-radius:5px;
+    display:block;
+    width: 86vw;
+    font-size:1.2rem;
+}
+
+select
+{
+    border-color: var(--color-text-input);
+    padding: 0.7rem;
+    color: var(--color-text-primary);
+    font-size:1.2rem;
+    border-radius:5px;
+    display:block;
+    width: 90vw;
+}
+
+textarea
+{
+   font: 400 1.2rem Noto Sans, sans-serif; 
+   border-color: var(--color-text-input);
+   color: var(--color-text-primary);
+   display:block;
+   width:88vw;
+   height: 15rem;
+   border-radius: 8px;
+   min-height: 8rem;
+   resize:vertical;
+   padding: 0.7rem;
+}
+
+@media(min-width: 700px)
+{
+    html
+    {
+        font-size:62.5%;    
+    }
+
+    body{
+        font-size:1.6rem;
+    }
+
+    .botao_cadastrar
+    {
+        font-size:1.7rem;
+        padding:10px;
+    }
+
+    .conteudo
+    {
+        padding:35px;
+        height:38vw;
+        
+    }
+
+    .campos
+    {
+        display:flex;
+        justify-content: left;
+        flex-direction: row;
+        flex-wrap: wrap;
+        width: 100%;
+    } 
+
+    input
+    {
+        width: 29vw;
+        font-size:1.8rem;
+    }
+
+    select
+    {     
+        width:30.5vw;
+        font-size:1.8rem;
+    }
+
+    textarea
+    {
+        font-size:1.8rem;
+        display:block;
+        width:92vw;
+        height: 15rem;
+        border-radius: 8px;
+        min-height: 8rem;
+        resize:vertical;   
+    }
+
+
+
+    input, select
+    {
+        margin-right:10px;   
+    }
+
+    input, select, textarea
+    {
+        margin-bottom: 5px;
+    }
+}

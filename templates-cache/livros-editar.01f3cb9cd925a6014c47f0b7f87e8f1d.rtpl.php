@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../res/styles/edicao.css">
+    <link rel="stylesheet" href="../res/styles/font-awesome/css/font-awesome.min.css">
     <title>Editar Livros</title>
 </head>
 <body>
@@ -14,7 +15,7 @@
 
             <h1>Editar Livros</h1>
 
-            <a href="/livros">Voltar</a>
+            <a href="/livros"><i class="fa fa-arrow-left"></i>Voltar</a>
 
         </header>
 
