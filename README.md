@@ -1,7 +1,17 @@
 ﻿# Livraria
-Site para visualização e cadastro de livros.
+Site criado para uma livraria.
 
 <p>
+  Este site é divido em duas partes:
+  
+  <ol>
+    <li>
+      Visualização todas os livros com as informações a eles atreladas. 
+    </li>
+    <li>
+      Painel onde é possível cadastrar, editar, excluir e visualizar os livros cadastrados, assim como seus autores e editoras.
+    </li>
+  </ol>
   
 </p>
 
