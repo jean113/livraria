@@ -46,6 +46,7 @@ Site criado para uma livraria.
 
 <p>
 <b>Requisitos:</b><br/>
+  
 <ul>
   <li>Git - para baixar os arquivos para o computador</li>
   <li>Xampp - para instalar Apache, PHP e MySQL</li>
