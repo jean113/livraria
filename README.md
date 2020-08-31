@@ -28,7 +28,7 @@ Site criado para uma livraria.
 
 <hr/>
 <b>Ferramentas utilizadas:</b>
-
+<br/>
 <ul>
   <li>Visual Studio Code</li>
   <li>Linguagem PHP </li>
@@ -45,8 +45,8 @@ Site criado para uma livraria.
 <hr/>
 
 <p>
-<b>Requisitos:</b><br/>
-  
+<b>Requisitos:</b>
+<br/>  
 <ul>
   <li>Git - para baixar os arquivos para o computador</li>
   <li>Xampp - para instalar Apache, PHP e MySQL</li>
