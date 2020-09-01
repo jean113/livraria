@@ -52,7 +52,7 @@ Site criado para uma livraria.
 <ul>
   <li>Git versão 2.28.0 - para baixar os arquivos para o computador</li>
   <li>Xampp versão 3.2.4- para instalar Apache, PHP e MySQL</li>
-  <li>MySql Community 8.0.2</li>
+  <li>MySql Community 8.0.2 e o WorkBench versão correspondente - atualizar o MySQL</li>
   
 </ul>
 </p>
