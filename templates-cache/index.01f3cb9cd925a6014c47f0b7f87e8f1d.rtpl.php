@@ -29,9 +29,15 @@
                     <b>Autor: </b> <?php echo $value1["autor"]; ?>  <br/>
                     <b>Editora: </b><?php echo $value1["editora"]; ?> <br/>
                     <b>Data de edição: </b><?php echo $value1["dt_edicao"]; ?> <br/>
-                    <b>Páginas: </b> <?php echo $value1["paginas"]; ?> <br/>
-                    <b>Tipo de impressão: </b> <?php echo $value1["impressao"]; ?>  <br/>
-                    <b>Descrição: </b><?php echo $value1["descricao"]; ?> <br/>
+                    <?php if( $value1["paginas"] ){ ?>
+                        <b>Páginas: </b> <?php echo $value1["paginas"]; ?> <br/>
+                    <?php } ?>    
+                    <?php if( $value1["impressao"] ){ ?>
+                        <b>Tipo de impressão: </b> <?php echo $value1["impressao"]; ?>  <br/>
+                    <?php } ?>  
+                    <?php if( $value1["descricao"] ){ ?>
+                        <b>Descrição: </b><?php echo $value1["descricao"]; ?> <br/>
+                    <?php } ?>
                             
                 </li>
             <?php } ?>

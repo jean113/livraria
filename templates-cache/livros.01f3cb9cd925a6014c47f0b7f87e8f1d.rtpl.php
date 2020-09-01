@@ -1,9 +1,13 @@
 <?php if(!class_exists('Rain\Tpl')){exit;}?>
 
     <div class="conteudo">
-        <h1> Livros</h1>
-        <a href="/livros/criar" class="botao_cadastrar">Adicionar</a>
-        <?php if( $DATA ){ ?>
+        <header>
+          <h1> Livros</h1>
+          <a href="/livros/criar" class="botao_cadastrar">Adicionar</a>
+        </header>
+        
+        <main>
+          <?php if( $DATA ){ ?>
           <table>
               <thead>
                 <tr>
@@ -48,6 +52,7 @@
               </tbody>
             </table>
           <?php } ?>
+        </main>
     </div>
     
 </body>

@@ -3,38 +3,47 @@
 
 
     <div class="conteudo">
-      <h1>Editoras</h1>
+      <header>
+        <h1>Editoras</h1>
         <a href="/editoras/criar" class="botao_cadastrar">Adicionar</a>
-        {if="$DATA"}
-          <table>
-              <thead>
-                <tr>
-                  <th style="width: 10px">#</th>
-                  <th>Nome </th>
-                  <th>E-mail</th>
-                </tr>
-              </thead>
-              <tbody>
-                {loop="$DATA"}
-                <tr>
-                  <td>{$value.id}</td>
-                  <td>{$value.nome}</td>
-                  <td>{$value.email}</td>
-                  <td>
-                  
-                    <a href="/editoras/{$value.id}" class="botao_cadastrar"> <i class="fa fa-edit fa-lg"></i> </a>
-                    
-                    <a href="/editoras/{$value.id}/apagar" class="botao_excluir" 
-                        onclick="return confirm('Deseja realmente excluir este registro?')">  
-                        <i class="fa fa-trash-o fa-lg"></i>
-                    </a>
+      </header>
 
-                  </td>
-                </tr>
-                {/loop}
-              </tbody>
-            </table>
-          {/if}
+      <main>
+
+        {if="$DATA"}
+        <table>
+            <thead>
+              <tr>
+                <th style="width: 10px">#</th>
+                <th>Nome </th>
+                <th>E-mail</th>
+              </tr>
+            </thead>
+            <tbody>
+              {loop="$DATA"}
+              <tr>
+                <td>{$value.id}</td>
+                <td>{$value.nome}</td>
+                <td>{$value.email}</td>
+                <td>
+                
+                  <a href="/editoras/{$value.id}" class="botao_cadastrar"> <i class="fa fa-edit fa-lg"></i> </a>
+                  
+                  <a href="/editoras/{$value.id}/apagar" class="botao_excluir" 
+                      onclick="return confirm('Deseja realmente excluir este registro?')">  
+                      <i class="fa fa-trash-o fa-lg"></i>
+                  </a>
+
+                </td>
+              </tr>
+              {/loop}
+            </tbody>
+          </table>
+        {/if}
+
+      </main>
+      
+       
     </div>
     
 </body>

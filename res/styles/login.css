@@ -1,6 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;700&display=swap');
 
-
 html
 {
     box-sizing: border-box;
@@ -32,6 +31,15 @@ body
     color: var(-color-text-primary);
     background-color: var(--color-background);
     -webkit-font-smoothing: antialiased;
+
+    height: 500px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    
+
 }
 
 header
@@ -57,7 +65,7 @@ i
 span
 {
     font-weight: 700;
-    font-size:1.3rem;
+    font-size:0.8rem;
     color:red;
     margin-top:10px;
     border: 1px red solid;
@@ -65,6 +73,8 @@ span
     padding: 5px;
 
 }
+
+
 
 .logo
 {
@@ -78,7 +88,7 @@ a
     font-weight: 700;
     color:var(--color-text-link-secundary);
     text-decoration:none;
-    transition: opacity 0.25s;
+    transition: opacity 0.2s;
 }
 
 a:hover
@@ -92,7 +102,7 @@ a:hover
 {
     background-color: var(--color-background-secundary);
     padding:35px;
-    border-radius: 8px;
+    border-radius: 8px; 
 }
 
 .campos
@@ -129,7 +139,7 @@ h1
     transition: background-color 0.25s; 
     border:none;
     cursor:pointer;
-    margin-top:10px;
+    margin-top:20px;
 }
 
 .botao_cadastrar:hover
@@ -163,20 +173,16 @@ input
     body
     {
         font-size:1.6rem;
+        height: 600px;
     }
 
     .botao_cadastrar
     {
-        margin-top:40px;
         font-size:2rem;
         padding: 10px 50px 10px 50px;
     }
 
-    .conteudo
-    {
-        height:38vw;     
-    }
-
+    
     .logo
     {
         margin-bottom: 25px;
@@ -187,5 +193,10 @@ input
         width: 25vw;
         font-size:1.8rem;
         padding:1.5rem;
+    }
+
+    span
+    {
+        font-size:1.3rem;
     }
 }

@@ -50,7 +50,7 @@ a
     font-weight: 700;
     color:var(--color-text-link-secundary);
     text-decoration:none;
-    transition: opacity 0.25s;
+    transition: opacity 0.2s;
 }
 
 a:hover

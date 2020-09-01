@@ -33,12 +33,29 @@ body
     -webkit-font-smoothing: antialiased;
 }
 
+main
+{
+    display:flex;
+    justify-content: center;
+}
+
+i
+{
+    margin-right:3px;
+}
+
+
+.painel
+{
+    margin-bottom: 8px;
+}
 
 .painel a
 {
     font-weight: 700;
     color:var(--color-text-link);
     text-decoration:none;
+    margin-right:20px;
 }
 
 .painel a:hover
@@ -120,7 +137,7 @@ tbody > tr
     border-radius:5px;
     margin-left: 1px;
     text-decoration: none;
-    transition: background-color 0.25s; 
+    transition: background-color 0.2s; 
     cursor:pointer;
 }
 
@@ -201,8 +218,6 @@ tbody > tr
         padding-left:15px;   
         padding-right:15px;  
     }
-
-    
 
     .painel
     {

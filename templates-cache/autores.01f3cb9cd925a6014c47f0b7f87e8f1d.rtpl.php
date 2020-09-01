@@ -2,8 +2,12 @@
 
 
     <div class="conteudo">
-      <h1>Autores</h1>
+      <header>
+        <h1>Autores</h1>
         <a href="/autores/criar" class="botao_cadastrar">Adicionar</a>
+      </header>
+      <main>
+
         <?php if( $DATA ){ ?>
           <table>
               <thead>
@@ -38,6 +42,10 @@
               </tbody>
             </table>
           <?php } ?>
+
+      </main>
+     
+        
     </div>
     
 </body>

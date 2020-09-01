@@ -1,9 +1,13 @@
 
 
     <div class="conteudo">
-        <h1> Livros</h1>
-        <a href="/livros/criar" class="botao_cadastrar">Adicionar</a>
-        {if="$DATA"}
+        <header>
+          <h1> Livros</h1>
+          <a href="/livros/criar" class="botao_cadastrar">Adicionar</a>
+        </header>
+        
+        <main>
+          {if="$DATA"}
           <table>
               <thead>
                 <tr>
@@ -48,6 +52,7 @@
               </tbody>
             </table>
           {/if}
+        </main>
     </div>
     
 </body>
