@@ -22,7 +22,7 @@
 
             
             
-            if ( $senha === $dado["senha"] )
+            if ( md5($senha) === $dado["senha"] )
             {
                 
                 $_SESSION[Usuario::SESSION] = $dado;

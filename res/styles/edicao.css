@@ -30,6 +30,7 @@ body
     color: var(-color-text-primary);
     background-color: var(--color-background);
     -webkit-font-smoothing: antialiased;
+    
 }
 
 header
@@ -72,10 +73,6 @@ a:hover
     background-color: var(--color-background-secundary);
     padding:5px;
     border-radius: 8px;
-}
-
-h1
-{
     color: var(--color-text-header);
 }
 
@@ -114,6 +111,7 @@ input
     display:block;
     width: 86vw;
     font-size:1.2rem;
+    margin-bottom: 10px;
 }
 
 select
@@ -125,6 +123,7 @@ select
     border-radius:5px;
     display:block;
     width: 90vw;
+    margin-bottom: 10px;
 }
 
 textarea
@@ -134,10 +133,10 @@ textarea
    color: var(--color-text-primary);
    display:block;
    width:88vw;
-   height: 15rem;
+   height: 8.5rem;
    border-radius: 8px;
    min-height: 8rem;
-   resize:vertical;
+   resize:none;
    padding: 0.7rem;
 }
 
@@ -161,8 +160,7 @@ textarea
     .conteudo
     {
         padding:35px;
-        height:38vw;
-        
+        height:38vw;  
     }
 
     .campos
