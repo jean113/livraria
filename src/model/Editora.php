@@ -16,7 +16,10 @@
             $bd = new BD();
             try
             {
-                $bd->query("INSERT INTO editora(nome) VALUES (:NOME)",  array(":NOME" => $this->getNome()));
+                $bd->query("INSERT INTO editora(nome, email) VALUES (:NOME, :EMAIL)",  
+                    array(":NOME" => $this->getNome(),
+                          ":EMAIL" => $this->getEmail() 
+                ));
             }
             catch (Exception $e) {
 
@@ -87,8 +90,10 @@
             
             try
             {
-                $bd->query("UPDATE editora SET nome = :NOME WHERE id = :ID ", 
-                        array(":NOME"=> $this->getNome(),":ID" => $id));
+                $bd->query("UPDATE editora SET nome = :NOME, email = :EMAIL WHERE id = :ID ", 
+                        array(":NOME"=> $this->getNome(),
+                        ":EMAIL"=> $this->getEmail(),
+                        ":ID" => $id));
                 
             }
             catch (Exception $e) {

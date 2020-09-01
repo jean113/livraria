@@ -22,10 +22,16 @@
         
 
         <form role="form" action="/autores/criar" method="post">
-            <div class="campo">
+            <div class="campos">
                 <div>
                     <label for="">Nome</label>
-                    <input type="text" name="nome" placeHolder="Nome do Autor"/>
+                    <input type="text" name="nome" maxlength="50" required/>
+                </div>
+
+                <div>
+                    <label for="">Telefone</label>
+                    <input type="tel" name="telefone" maxlength="17"
+                    pattern="(\([0-9]{3}\))?(([0-9]){2})?([0-9]){5}-([0-9]){4}"/>
                 </div>
             </div>
             

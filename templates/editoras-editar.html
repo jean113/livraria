@@ -20,12 +20,21 @@
 
         <form action="/editoras/{$DATA.id}" method="post">
             <div class="campos">
+
                 <div>
                     <label for="">Nome</label>
-                    <input type="text"  id="{$DATA.nome}" 
-                            name="nome" placeholder="Digite o nome do editora" 
-                            value="{$DATA.nome}">
+                    <input type="text" 
+                            name="nome" 
+                            value="{$DATA.nome}" maxlength="50" required>
+
                 </div>
+
+                <div>
+                    <label for="">E-mail</label>
+                    <input type="email" value="{$DATA.email}" name="email" 
+                         maxlength="30"/>
+                </div>
+
             </div>
            
             <button type="submit" class="botao_cadastrar">Editar</button>

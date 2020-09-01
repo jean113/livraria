@@ -22,16 +22,9 @@
 
             
             
-            if ($senha == $dado["senha"])
+            if ( $senha === $dado["senha"] )
             {
                 
-                //$usuario = new Usuario();
-
-                //$dado["login"] = utf8_encode($dado["login"]);
-
-                //$usuario->setValores($dado);
-
-
                 $_SESSION[Usuario::SESSION] = $dado;
 
                 return true;
@@ -44,7 +37,7 @@
         }
         
       
-        //verifica se a sessão do administrador ainda existe
+        //verifica se a sessão do administrador existe
         public static function verificarSessao()
         {
             

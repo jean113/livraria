@@ -10,7 +10,7 @@
                 <tr>
                   <th style="width: 10px">#</th>
                   <th>Nome </th>
-                  <th style="width: 140px">&nbsp;</th>
+                  <th>Telefone</th>
                 </tr>
               </thead>
               <tbody>
@@ -19,6 +19,7 @@
                 <tr>
                   <td><?php echo $value1["id"]; ?></td>
                   <td><?php echo $value1["nome"]; ?></td>
+                  <td><?php echo $value1["telefone"]; ?></td>
                   <td>
 
                     <a href="/autores/<?php echo $value1["id"]; ?>" class="botao_cadastrar"> <i class="fa fa-edit fa-lg"></i> </a>

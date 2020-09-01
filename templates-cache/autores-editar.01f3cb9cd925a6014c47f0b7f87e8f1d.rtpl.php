@@ -23,10 +23,18 @@
 
                     <div>
                         <label for="">Nome</label>
-                        <input type="text"  id="<?php echo $DATA["nome"]; ?>" 
-                                name="nome" placeholder="Digite o nome do autor" 
-                                value="<?php echo $DATA["nome"]; ?>">   
+                        <input type="text" 
+                                name="nome"
+                                value="<?php echo $DATA["nome"]; ?>" maxlength="50" required>   
                     </div>
+
+                    <div>
+                        <label for="">Telefone</label>
+                        <input type="tel" name="telefone" value="<?php echo $DATA["telefone"]; ?>"
+                        
+                        maxlength="14"/>
+                    </div>
+                   
 
             </div>
             

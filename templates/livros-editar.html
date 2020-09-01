@@ -27,7 +27,7 @@
 
                     <label for="">Título</label>
                     <input type="text"  id="{$DATA.titulo}" 
-                            name="titulo" placeholder="Nome do livro" 
+                            name="titulo" 
                             value="{$DATA.titulo}" required>
 
                 </div>
@@ -74,21 +74,21 @@
                 <div>
 
                     <label for="">Páginas</label>
-                    <input value="{$DATA.paginas}" type="number" name="paginas" placeHolder="Quantidade de páginas"/>
+                    <input value="{$DATA.paginas}" type="number" name="paginas" />
 
                 </div>
 
                 <div>
 
                     <label for="">Tipo de Impressão</label>
-                    <input value="{$DATA.impressao}" type="text" name="impressao" placeHolder="Tipo de impressão" maxlength="15"/>
+                    <input value="{$DATA.impressao}" type="text" name="impressao" maxlength="15"/>
 
                 </div>
 
                 <div>
 
                     <label for="">Descrição</label>
-                    <textarea name="descricao" placeHolder="Descrição"  maxlength="200"> {$DATA.descricao} </textarea>
+                    <textarea name="descricao" maxlength="200"> {$DATA.descricao} </textarea>
 
 
                 </div>

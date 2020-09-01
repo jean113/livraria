@@ -25,7 +25,7 @@
 
                 <div>
                     <label for="">Título</label>
-                    <input type="text" name="titulo" placeHolder="Nome do livro" maxlength="25" required/>
+                    <input type="text" name="titulo"  maxlength="25" required/>
                 </div>
                 
                 <div>
@@ -55,20 +55,20 @@
     
                 <div>
                     <label for="">Páginas</label>
-                <input type="number" name="paginas" placeHolder="Quantidade de páginas"/>
+                <input type="number" name="paginas"/>
     
                 </div>
                 
                 <div>
                     <label for="">Tipo de Impressão</label>
-                <input type="text" name="impressao" placeHolder="Tipo de impressão" maxlength="15"/>
+                <input type="text" name="impressao" maxlength="15"/>
     
                 </div>
                 
     
                 <div>
                     <label for="">Descrição</label>
-                    <textarea name="descricao" placeHolder="Descrição" maxlength="200"></textarea>
+                    <textarea name="descricao" maxlength="200"></textarea>
     
                 </div>
 

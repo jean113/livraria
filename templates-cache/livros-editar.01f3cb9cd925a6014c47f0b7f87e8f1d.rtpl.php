@@ -27,7 +27,7 @@
 
                     <label for="">Título</label>
                     <input type="text"  id="<?php echo $DATA["titulo"]; ?>" 
-                            name="titulo" placeholder="Nome do livro" 
+                            name="titulo" 
                             value="<?php echo $DATA["titulo"]; ?>" required>
 
                 </div>
@@ -74,21 +74,21 @@
                 <div>
 
                     <label for="">Páginas</label>
-                    <input value="<?php echo $DATA["paginas"]; ?>" type="number" name="paginas" placeHolder="Quantidade de páginas"/>
+                    <input value="<?php echo $DATA["paginas"]; ?>" type="number" name="paginas" />
 
                 </div>
 
                 <div>
 
                     <label for="">Tipo de Impressão</label>
-                    <input value="<?php echo $DATA["impressao"]; ?>" type="text" name="impressao" placeHolder="Tipo de impressão" maxlength="15"/>
+                    <input value="<?php echo $DATA["impressao"]; ?>" type="text" name="impressao" maxlength="15"/>
 
                 </div>
 
                 <div>
 
                     <label for="">Descrição</label>
-                    <textarea name="descricao" placeHolder="Descrição"  maxlength="200"> <?php echo $DATA["descricao"]; ?> </textarea>
+                    <textarea name="descricao" maxlength="200"> <?php echo $DATA["descricao"]; ?> </textarea>
 
 
                 </div>

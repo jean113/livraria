@@ -14,9 +14,13 @@
         public function inserir()
         {
             $bd = new BD();
+          
             try
             {
-                $bd->query("INSERT INTO autor(nome) VALUES (:NOME)",  array(":NOME" => $this->getNome()));
+                $bd->query("INSERT INTO autor(nome, telefone) VALUES (:NOME, :TELEFONE)",  
+                    array(":NOME" => $this->getNome(),
+                          ":TELEFONE" => $this->getTelefone()
+                ));
             }
             catch (Exception $e) {
 
@@ -87,8 +91,10 @@
             
             try
             {
-                $bd->query("UPDATE autor SET nome = :NOME WHERE id = :ID ", 
-                        array(":NOME"=> $this->getNome(),":ID" => $id));
+                $bd->query("UPDATE autor SET nome = :NOME, telefone = :TELEFONE WHERE id = :ID ", 
+                        array(":NOME"=> $this->getNome(),
+                        ":TELEFONE" => $this->getTelefone(),
+                        ":ID" => $id));
                 
             }
             catch (Exception $e) {

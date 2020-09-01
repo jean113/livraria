@@ -44,6 +44,9 @@ $app->post('/autores/criar', function()
     
     $autor = new Autor();
     $autor->setNome($_POST["nome"]);
+    $autor->setTelefone($_POST["telefone"]);
+
+   
 
     $autor->inserir();
     
@@ -100,6 +103,7 @@ $app->post('/autores/:id', function($id)
     
     $autor = new Autor();
     $autor->setNome($_POST["nome"]);
+    $autor->setTelefone($_POST["telefone"]);
 
     $autor->editar($id);
 

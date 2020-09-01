@@ -20,12 +20,21 @@
 
         <form action="/editoras/<?php echo $DATA["id"]; ?>" method="post">
             <div class="campos">
+
                 <div>
                     <label for="">Nome</label>
-                    <input type="text"  id="<?php echo $DATA["nome"]; ?>" 
-                            name="nome" placeholder="Digite o nome do editora" 
-                            value="<?php echo $DATA["nome"]; ?>">
+                    <input type="text" 
+                            name="nome" 
+                            value="<?php echo $DATA["nome"]; ?>" maxlength="50" required>
+
                 </div>
+
+                <div>
+                    <label for="">E-mail</label>
+                    <input type="email" value="<?php echo $DATA["email"]; ?>" name="email" 
+                         maxlength="30"/>
+                </div>
+
             </div>
            
             <button type="submit" class="botao_cadastrar">Editar</button>

@@ -22,6 +22,8 @@ html
     --color-background-button: #2E64FE;
     --color-background-button-darker:#0040FF;
 
+    --color-line: #5840BB;
+
 }
 
 body
@@ -35,38 +37,79 @@ body
 header
 {
     display:flex;
-    justify-content: space-between;
-    align-items: center;
+    justify-content: right;
+
 }
 
-
-.campos
+form
 {
     display:flex;
     flex-direction: column;
+    justify-content: center;
     align-items: center;
 }
 
+i
+{
+    margin-right:7px;
+}
+
+span
+{
+    font-weight: 700;
+    font-size:1.3rem;
+    color:red;
+    margin-top:10px;
+    border: 1px red solid;
+    border-radius:8px;
+    padding: 5px;
+
+}
+
+.logo
+{
+    color: var(--color-background);
+    margin-bottom: 10px;
+    
+}
 
 a
 {
     font-weight: 700;
     color:var(--color-text-link-secundary);
     text-decoration:none;
+    transition: opacity 0.25s;
 }
 
 a:hover
 {
     color: var(--color-text-link-secundary);
-    background-color: var(--color-background-secundary);
-  
+    opacity: 0.7;
 }
+
 
 .conteudo
 {
     background-color: var(--color-background-secundary);
-    padding:5px;
+    padding:35px;
     border-radius: 8px;
+}
+
+.campos
+{
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border:1px solid var(--color-line);
+    width:40vw;
+    padding:10px;
+    border-radius:5px;
+}
+
+.campos div input:first-child
+{
+    margin-top:10px;
 }
 
 h1
@@ -104,36 +147,10 @@ input
     border-color: var(--color-text-input);
     padding: 0.7rem;
     color: var(--color-text-primary);
-    font-size:1.8rem;
     border-radius:5px;
     display:block;
-    width: 86vw;
     font-size:1.2rem;
-}
-
-select
-{
-    border-color: var(--color-text-input);
-    padding: 0.7rem;
-    color: var(--color-text-primary);
-    font-size:1.2rem;
-    border-radius:5px;
-    display:block;
-    width: 90vw;
-}
-
-textarea
-{
-   font: 400 1.2rem Noto Sans, sans-serif; 
-   border-color: var(--color-text-input);
-   color: var(--color-text-primary);
-   display:block;
-   width:88vw;
-   height: 15rem;
-   border-radius: 8px;
-   min-height: 8rem;
-   resize:vertical;
-   padding: 0.7rem;
+    
 }
 
 @media(min-width: 700px)
@@ -143,64 +160,32 @@ textarea
         font-size:62.5%;    
     }
 
-    body{
+    body
+    {
         font-size:1.6rem;
     }
 
     .botao_cadastrar
     {
-        font-size:1.7rem;
-        padding:10px;
+        margin-top:40px;
+        font-size:2rem;
+        padding: 10px 50px 10px 50px;
     }
 
     .conteudo
     {
-        padding:35px;
-        height:38vw;
-        
+        height:38vw;     
     }
 
-    .campos
+    .logo
     {
-        display:flex;
-        justify-content: left;
-        flex-direction: row;
-        flex-wrap: wrap;
-        width: 100%;
-    } 
+        margin-bottom: 25px;
+    }
 
     input
     {
-        width: 29vw;
+        width: 25vw;
         font-size:1.8rem;
-    }
-
-    select
-    {     
-        width:30.5vw;
-        font-size:1.8rem;
-    }
-
-    textarea
-    {
-        font-size:1.8rem;
-        display:block;
-        width:92vw;
-        height: 15rem;
-        border-radius: 8px;
-        min-height: 8rem;
-        resize:vertical;   
-    }
-
-
-
-    input, select
-    {
-        margin-right:10px;   
-    }
-
-    input, select, textarea
-    {
-        margin-bottom: 5px;
+        padding:1.5rem;
     }
 }

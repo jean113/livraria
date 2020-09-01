@@ -23,10 +23,18 @@
 
                     <div>
                         <label for="">Nome</label>
-                        <input type="text"  id="{$DATA.nome}" 
-                                name="nome" placeholder="Digite o nome do autor" 
-                                value="{$DATA.nome}">   
+                        <input type="text" 
+                                name="nome"
+                                value="{$DATA.nome}" maxlength="50" required>   
                     </div>
+
+                    <div>
+                        <label for="">Telefone</label>
+                        <input type="tel" name="telefone" value="{$DATA.telefone}"
+                        
+                        maxlength="14"/>
+                    </div>
+                   
 
             </div>
             

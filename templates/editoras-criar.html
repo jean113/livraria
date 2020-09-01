@@ -25,7 +25,12 @@
             <div class="campos">
                 <div>
                     <label for="">Nome</label>
-                    <input type="text" name="nome" placeHolder="Nome do editora" />
+                    <input type="text" name="nome"  maxlength="50" required/>
+                </div>
+
+                <div>
+                    <label for="">E-mail</label>
+                    <input type="email" name="email"  maxlength="30"/>
                 </div>
             </div>
             

@@ -44,6 +44,7 @@ $app->post('/editoras/criar', function()
     
     $editora = new Editora();
     $editora->setNome($_POST["nome"]);
+    $editora->setEmail($_POST["email"]);
 
     $editora->inserir();
 
@@ -100,6 +101,7 @@ $app->post('/editoras/:id', function($id)
     
     $editora = new Editora();
     $editora->setNome($_POST["nome"]);
+    $editora->setEmail($_POST["email"]);
 
     $editora->editar($id);
 

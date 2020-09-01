@@ -33,6 +33,7 @@ body
     -webkit-font-smoothing: antialiased;
 }
 
+
 .painel a
 {
     font-weight: 700;
@@ -43,8 +44,7 @@ body
 .painel a:hover
 {
     color: var(--color-text-link-secundary);
-    background-color: var(--color-background-secundary);
-  
+    background-color:var(--color-background-secundary);
 }
 
 .conteudo

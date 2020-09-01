@@ -20,8 +20,8 @@
         }
         else
         {
-            header("Location: /login");
-            exit;     
+            $pagina = new Pagina();
+            $pagina->criarPagina("login", "erro");   
         }
         
     });

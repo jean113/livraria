@@ -39,18 +39,24 @@ header
     align-items: center;
 }
 
+i
+{
+    margin-right:7px;
+}
+
+
 a
 {
     font-weight: 700;
     color:var(--color-text-link-secundary);
     text-decoration:none;
+    transition: opacity 0.25s;
 }
 
 a:hover
 {
     color: var(--color-text-link-secundary);
-    background-color: var(--color-background-secundary);
-      
+    opacity: 0.7;
 }
 
 .conteudo
