@@ -1,11 +1,15 @@
 CREATE DATABASE db_livraria;
 
+
+
 USE db_livraria;
 
 CREATE TABLE editora (
   id INTEGER UNSIGNED NOT NULL AUTO_INCREMENT,
   nome VARCHAR(50) NOT NULL,
   email VARCHAR(30) NOT NULL,
+  telefone VARCHAR(17) NULL,
+  obs VARCHAR(100) NULL,
   PRIMARY KEY(id)
 );
 
@@ -13,6 +17,8 @@ CREATE TABLE autor (
   id INTEGER UNSIGNED NOT NULL AUTO_INCREMENT,
   nome VARCHAR(50) NOT NULL,
   telefone VARCHAR(17) NULL,
+  email VARCHAR(30) NULL,
+  obs VARCHAR(100) NULL,
   PRIMARY KEY(id)
 );
 
@@ -31,7 +37,7 @@ CREATE TABLE livro (
   dt_edicao DATETIME NOT NULL,
   paginas INTEGER UNSIGNED NULL,
   impressao VARCHAR(15) NULL,
-  descricao VARCHAR(50) NULL,
+  descricao VARCHAR(200) NULL,
   PRIMARY KEY(id),
   INDEX livro_FKIndex1(autor_id),
   INDEX livro_FKIndex2(editora_id),
@@ -46,5 +52,3 @@ CREATE TABLE livro (
 );
 
 INSERT INTO admin(login, senha) VALUES('admin', md5('123')); 
-
-

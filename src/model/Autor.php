@@ -17,9 +17,11 @@
           
             try
             {
-                $bd->query("INSERT INTO autor(nome, telefone) VALUES (:NOME, :TELEFONE)",  
+                $bd->query("INSERT INTO autor(nome, telefone, email, obs) VALUES (:NOME, :TELEFONE, :EMAIL, :OBS)",  
                     array(":NOME" => $this->getNome(),
-                          ":TELEFONE" => $this->getTelefone()
+                          ":TELEFONE" => $this->getTelefone(),
+                          ":EMAIL" => $this->getEmail(),
+                          ":OBS" => $this->getObs()
                 ));
             }
             catch (Exception $e) {
@@ -91,9 +93,11 @@
             
             try
             {
-                $bd->query("UPDATE autor SET nome = :NOME, telefone = :TELEFONE WHERE id = :ID ", 
+                $bd->query("UPDATE autor SET nome = :NOME, telefone = :TELEFONE, email = :EMAIL, obs = :OBS WHERE id = :ID ", 
                         array(":NOME"=> $this->getNome(),
                         ":TELEFONE" => $this->getTelefone(),
+                        ":EMAIL" => $this->getEmail(),
+                        ":OBS" => $this->getObs(),
                         ":ID" => $id));
                 
             }

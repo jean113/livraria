@@ -16,7 +16,9 @@
               <tr>
                 <th style="width: 10px">#</th>
                 <th>Nome </th>
+                <th>Telefone</th>
                 <th>E-mail</th>
+                <th>Observações</th>
               </tr>
             </thead>
             <tbody>
@@ -24,7 +26,9 @@
               <tr>
                 <td><?php echo $value1["id"]; ?></td>
                 <td><?php echo $value1["nome"]; ?></td>
+                <td><?php echo $value1["telefone"]; ?></td>
                 <td><?php echo $value1["email"]; ?></td>
+                <td><?php echo $value1["obs"]; ?></td>
                 <td>
                 
                   <a href="/editoras/<?php echo $value1["id"]; ?>" class="botao_cadastrar"> <i class="fa fa-edit fa-lg"></i> </a>

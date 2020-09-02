@@ -34,6 +34,17 @@
                         
                         maxlength="14"/>
                     </div>
+
+                    <div>
+                        <label for="">E-mail</label>
+                        <input type="email" name="email" value="<?php echo $DATA["email"]; ?>" maxlength="30"/>
+                    </div>
+
+                    <div>
+                        <label for="">Observação</label>
+                        <textarea name="obs" maxlength="100" > <?php echo $DATA["obs"]; ?> </textarea>
+        
+                    </div>
                    
 
             </div>
