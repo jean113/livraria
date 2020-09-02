@@ -20,8 +20,11 @@ Site criado para uma livraria.
 
 <p>
 
-<b>Preview</b></br>
-<img src = "" />
+<b>Preview 1</b></br>
+<img src = "https://github.com/jean113/livraria/blob/master/preview/preview.gif" />
+
+<b>Preview 2</b></br>
+<img src = "https://github.com/jean113/livraria/blob/master/preview/preview2.gif" />
 
 </p>
 
