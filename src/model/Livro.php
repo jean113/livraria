@@ -32,7 +32,7 @@
                     ":EDITORA_ID" => $this->getEditoraID(),
                     ":AUTOR_ID" => $this->getAutorID(),
                     ":DT_EDICAO" =>  date($this->getDtEdicao()) ,
-                    ":PAGINAS" => $this->getPaginas(),
+                    ":PAGINAS" => (int)$this->getPaginas(),
                     ":IMPRESSAO" => $this->getImpressao(),
                     ":DESCRICAO" => $this->getDescricao()
                 ));
@@ -119,7 +119,7 @@
                                     ":EDITORA_ID" => $this->getEditoraID(),
                                     ":AUTOR_ID" => $this->getAutorID(),
                                     ":DT_EDICAO" =>  date($this->getDtEdicao()) ,
-                                    ":PAGINAS" => $this->getPaginas(),
+                                    ":PAGINAS" =>(int) $this->getPaginas(),
                                     ":IMPRESSAO" => $this->getImpressao(),
                                     ":DESCRICAO" => $this->getDescricao(),
                                     ":ID" => $id) );             
