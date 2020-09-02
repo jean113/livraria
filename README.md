@@ -102,6 +102,7 @@ Site criado para uma livraria.
 <b>Observações:</b><br/>
 <ul>
   Talvez seja necessário usar o Visual Studio Code para ajustar os dados da conexão com o banco no código-fonte.
+  Isso é feito na Classe BD que fica na pasta src->Model.
 </ul>
 
 </p>
