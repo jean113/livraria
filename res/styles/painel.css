@@ -90,7 +90,8 @@ td
     padding:2.5px;
     color: var(--color-text-primary);
     text-align: center;
-    max-width: 100px;   
+    max-width: 100px;  
+    word-wrap: break-word; 
 }
 
 table
