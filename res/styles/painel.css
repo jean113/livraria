@@ -90,13 +90,14 @@ td
     padding:2.5px;
     color: var(--color-text-primary);
     text-align: center;
+    max-width: 100px;   
 }
-
 
 table
 {
     margin-top:5px;
     border-collapse: collapse;
+   
 }
 
 table div
@@ -212,10 +213,11 @@ tbody > tr
     td
     {
         padding:15px;
-        text-align: center;
+        max-width:450px;
     }
 
-    th{
+    th
+    {
         padding-left:15px;   
         padding-right:15px;  
     }
