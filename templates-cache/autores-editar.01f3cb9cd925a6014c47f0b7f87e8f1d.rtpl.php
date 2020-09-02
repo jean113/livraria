@@ -17,40 +17,44 @@
             <a href="/autores"><i class="fa fa-arrow-left"></i>Voltar</a>
 
         </header>
-    
-        <form action="/autores/<?php echo $DATA["id"]; ?>" method="post">
-            <div class="campos">
 
-                    <div>
-                        <label for="">Nome</label>
-                        <input type="text" 
-                                name="nome"
-                                value="<?php echo $DATA["nome"]; ?>" maxlength="50" required>   
-                    </div>
+        <main>
 
-                    <div>
-                        <label for="">Telefone</label>
-                        <input type="tel" name="telefone" value="<?php echo $DATA["telefone"]; ?>"
-                        
-                        maxlength="14"/>
-                    </div>
+            <form action="/autores/<?php echo $DATA["id"]; ?>" method="post">
+                <div class="campos">
 
-                    <div>
-                        <label for="">E-mail</label>
-                        <input type="email" name="email" value="<?php echo $DATA["email"]; ?>" maxlength="30"/>
-                    </div>
+                        <div>
+                            <label for="">Nome</label>
+                            <input type="text" 
+                                    name="nome"
+                                    value="<?php echo $DATA["nome"]; ?>" maxlength="50" required>   
+                        </div>
 
-                    <div>
-                        <label for="">Observação</label>
-                        <textarea name="obs" maxlength="100" > <?php echo $DATA["obs"]; ?> </textarea>
-        
-                    </div>
-                   
+                        <div>
+                            <label for="">Telefone</label>
+                            <input type="tel" name="telefone" value="<?php echo $DATA["telefone"]; ?>"
+                            
+                            maxlength="14"/>
+                        </div>
 
-            </div>
+                        <div>
+                            <label for="">E-mail</label>
+                            <input type="email" name="email" value="<?php echo $DATA["email"]; ?>" maxlength="30"/>
+                        </div>
+
+                        <div>
+                            <label for="">Observação</label>
+                            <textarea name="obs" maxlength="100" > <?php echo $DATA["obs"]; ?> </textarea>
             
-            <button type="submit" class="botao_cadastrar">Editar</button>
-        </form>
+                        </div>
+                    
+
+                </div>
+                
+                <button type="submit" class="botao_cadastrar">Editar</button>
+            </form>
+
+        </main>
     </div>
     
 </body>

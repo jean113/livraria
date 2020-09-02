@@ -1,5 +1,5 @@
 <?php
-
+/**Rotas para cadastros de editora */
 require_once("src/model/Pagina.php");
 require_once("src/model/Editora.php");
 

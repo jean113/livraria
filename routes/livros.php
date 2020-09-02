@@ -1,5 +1,5 @@
 <?php
-
+/**Rotas para cadastros de livros */
 require_once("src/model/Pagina.php");
 require_once("src/model/Livro.php");
 require_once("src/model/Autor.php");

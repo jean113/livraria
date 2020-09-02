@@ -19,90 +19,96 @@
 
         </header>
 
-        <form action="/livros/<?php echo $DATA["id"]; ?>" method="post">
+        <main>
 
-           <div class="campos">
+            <form action="/livros/<?php echo $DATA["id"]; ?>" method="post">
 
-                <div>
-
-                    <label for="">Título</label>
-                    <input type="text"  id="<?php echo $DATA["titulo"]; ?>" 
-                            name="titulo" 
-                            value="<?php echo $DATA["titulo"]; ?>" required>
-
+                <div class="campos">
+     
+                     <div>
+     
+                         <label for="">Título</label>
+                         <input type="text"  id="<?php echo $DATA["titulo"]; ?>" 
+                                 name="titulo" 
+                                 value="<?php echo $DATA["titulo"]; ?>" required>
+     
+                     </div>
+     
+                     <div>
+     
+                         <label for="">Autor</label>
+                         <select id="autor" name="autor" required>
+                             <?php $counter1=-1;  if( isset($DATA2) && ( is_array($DATA2) || $DATA2 instanceof Traversable ) && sizeof($DATA2) ) foreach( $DATA2 as $key1 => $value1 ){ $counter1++; ?>  
+                                 <?php if( $DATA["autor_id"] ==  $value1["id"] ){ ?>
+                                     <option value=<?php echo $value1["id"]; ?> selected><?php echo $value1["nome"]; ?></option>
+                                 <?php }else{ ?>
+                                     <option value=<?php echo $value1["id"]; ?> ><?php echo $value1["nome"]; ?></option>
+                                 <?php } ?>  
+                             <?php } ?>
+                         </select>
+     
+                     </div>
+     
+                     <div>
+     
+                         <label for="">Editora</label>
+                         <select id="editora" name="editora" required>
+                             <?php $counter1=-1;  if( isset($DATA3) && ( is_array($DATA3) || $DATA3 instanceof Traversable ) && sizeof($DATA3) ) foreach( $DATA3 as $key1 => $value1 ){ $counter1++; ?>
+                                 <?php if( $DATA["editora_id"] ==  $value1["id"] ){ ?>
+                                     <option value=<?php echo $value1["id"]; ?> selected><?php echo $value1["nome"]; ?></option>
+                                 <?php }else{ ?>
+                                     <option value=<?php echo $value1["id"]; ?> ><?php echo $value1["nome"]; ?></option>
+                                 <?php } ?>  
+                             <?php } ?>
+                         </select>
+     
+                     </div>
+     
+     
+                     <div>
+     
+                         <label for="">Data da edição</label>
+                         <input value="<?php echo $DATA["dt_edicao"]; ?>" type="date" name="dtEdicao" required/>
+     
+                     </div>
+         
+                 
+                     <div>
+     
+                         <label for="">Páginas</label>
+                         <input value="<?php echo $DATA["paginas"]; ?>" type="number" name="paginas" />
+     
+                     </div>
+     
+                     <div>
+     
+                         <label for="">Tipo de Impressão</label>
+                         <input value="<?php echo $DATA["impressao"]; ?>" type="text" name="impressao" maxlength="15"/>
+     
+                     </div>
+     
+                     <div>
+     
+                         <label for="">Descrição</label>
+                         <textarea name="descricao" maxlength="200"> <?php echo $DATA["descricao"]; ?> </textarea>
+     
+     
+                     </div>
+                 
+     
+                   
                 </div>
+         
+                 <button type="submit" class="botao_cadastrar">Editar</button>
+         
+     
+            </form>
 
-                <div>
+        </main>
 
-                    <label for="">Autor</label>
-                    <select id="autor" name="autor" required>
-                        <?php $counter1=-1;  if( isset($DATA2) && ( is_array($DATA2) || $DATA2 instanceof Traversable ) && sizeof($DATA2) ) foreach( $DATA2 as $key1 => $value1 ){ $counter1++; ?>  
-                            <?php if( $DATA["autor_id"] ==  $value1["id"] ){ ?>
-                                <option value=<?php echo $value1["id"]; ?> selected><?php echo $value1["nome"]; ?></option>
-                            <?php }else{ ?>
-                                <option value=<?php echo $value1["id"]; ?> ><?php echo $value1["nome"]; ?></option>
-                            <?php } ?>  
-                        <?php } ?>
-                    </select>
+        
 
-                </div>
-
-                <div>
-
-                    <label for="">Editora</label>
-                    <select id="editora" name="editora" required>
-                        <?php $counter1=-1;  if( isset($DATA3) && ( is_array($DATA3) || $DATA3 instanceof Traversable ) && sizeof($DATA3) ) foreach( $DATA3 as $key1 => $value1 ){ $counter1++; ?>
-                            <?php if( $DATA["editora_id"] ==  $value1["id"] ){ ?>
-                                <option value=<?php echo $value1["id"]; ?> selected><?php echo $value1["nome"]; ?></option>
-                            <?php }else{ ?>
-                                <option value=<?php echo $value1["id"]; ?> ><?php echo $value1["nome"]; ?></option>
-                            <?php } ?>  
-                        <?php } ?>
-                    </select>
-
-                </div>
-
-
-                <div>
-
-                    <label for="">Data da edição</label>
-                    <input value="<?php echo $DATA["dt_edicao"]; ?>" type="date" name="dtEdicao" required/>
-
-                </div>
-    
-            
-                <div>
-
-                    <label for="">Páginas</label>
-                    <input value="<?php echo $DATA["paginas"]; ?>" type="number" name="paginas" />
-
-                </div>
-
-                <div>
-
-                    <label for="">Tipo de Impressão</label>
-                    <input value="<?php echo $DATA["impressao"]; ?>" type="text" name="impressao" maxlength="15"/>
-
-                </div>
-
-                <div>
-
-                    <label for="">Descrição</label>
-                    <textarea name="descricao" maxlength="200"> <?php echo $DATA["descricao"]; ?> </textarea>
-
-
-                </div>
-            
-
-              
-           </div>
-    
-            <button type="submit" class="botao_cadastrar">Editar</button>
     </div>
-
-    
-    
-    </form>
     
 </body>
 </html>

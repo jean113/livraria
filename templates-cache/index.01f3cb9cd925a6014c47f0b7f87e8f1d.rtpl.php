@@ -21,28 +21,21 @@
 
        
 
-        <ul>
-            <?php $counter1=-1;  if( isset($DATA) && ( is_array($DATA) || $DATA instanceof Traversable ) && sizeof($DATA) ) foreach( $DATA as $key1 => $value1 ){ $counter1++; ?>
-                <li>
-                    
-                    <b>Livro: </b> <?php echo $value1["titulo"]; ?> <br/>
-                    <b>Autor: </b> <?php echo $value1["autor"]; ?>  <br/>
-                    <b>Editora: </b><?php echo $value1["editora"]; ?> <br/>
-                    <b>Data de edição: </b><?php echo $value1["dt_edicao"]; ?> <br/>
-                    <?php if( $value1["paginas"] ){ ?>
-                        <b>Páginas: </b> <?php echo $value1["paginas"]; ?> <br/>
-                    <?php } ?>    
-                    <?php if( $value1["impressao"] ){ ?>
-                        <b>Tipo de impressão: </b> <?php echo $value1["impressao"]; ?>  <br/>
-                    <?php } ?>  
-                    <?php if( $value1["descricao"] ){ ?>
-                        <b>Descrição: </b><?php echo $value1["descricao"]; ?> <br/>
+            <main>
+                <ul>
+                    <?php $counter1=-1;  if( isset($DATA) && ( is_array($DATA) || $DATA instanceof Traversable ) && sizeof($DATA) ) foreach( $DATA as $key1 => $value1 ){ $counter1++; ?>
+                        <li>
+                            <b>Livro: </b> <?php echo $value1["titulo"]; ?> <br/>
+                            <b>Autor: </b> <?php echo $value1["autor"]; ?>  <br/>
+                            <b>Editora: </b><?php echo $value1["editora"]; ?> <br/>
+                            <b>Data de edição: </b><?php echo $value1["dt_edicao"]; ?> <br/>
+                            <b>Páginas: </b> <?php echo $value1["paginas"]; ?> <br/>
+                            <b>Tipo de impressão: </b> <?php echo $value1["impressao"]; ?>  <br/>
+                            <b>Descrição: </b><?php echo $value1["descricao"]; ?> <br/>       
+                        </li>
                     <?php } ?>
-                            
-                </li>
-            <?php } ?>
-        </ul>
-
+                </ul>
+        </main>
 
 
     </div>

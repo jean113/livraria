@@ -132,11 +132,11 @@ textarea
    border-color: var(--color-text-input);
    color: var(--color-text-primary);
    display:block;
-   width:88vw;
-   height: 8.5rem;
+   width: 87vw; 
+   height: 25vh;
+   max-height:40vh;
    border-radius: 8px;
-   min-height: 8rem;
-   resize:none;
+   resize:vertical; 
    padding: 0.7rem;
 }
 
@@ -150,7 +150,6 @@ textarea
     body{
         font-size:1.6rem;
     }
-
     .botao_cadastrar
     {
         font-size:1.7rem;
@@ -175,31 +174,34 @@ textarea
     input
     {
         width: 29vw;
-        font-size:1.8rem;
+        
     }
 
     select
     {     
         width:30.5vw;
+        
+    }
+
+    input, select
+    {
         font-size:1.8rem;
+        margin-right:10px;   
     }
 
     textarea
     {
         font-size:1.8rem;
         display:block;
-        width:92vw;
+      
         height: 15rem;
         border-radius: 8px;
         min-height: 8rem;
-        resize:vertical;   
-    }
+        resize:vertical;  
+        
+        width: 91vw;
+        max-height:45vh;    
 
-
-
-    input, select
-    {
-        margin-right:10px;   
     }
 
     input, select, textarea

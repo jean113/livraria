@@ -1,5 +1,8 @@
 <?php
-
+/**
+ * Classe que fica entre a view e o BD.
+ * Recebe os dados passados pelo usuário e grava no banco
+ */
     require_once("Modelo.php");
     require_once("BD.php");
 

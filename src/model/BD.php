@@ -1,5 +1,9 @@
 <?php
-
+/**
+ * Classe responsável por fazer a manipulação direta com o BD
+ * Recebe os dados das classes e grava no BD e faz as consultas
+ * repassando para as classes
+ */
 class BD
 {
     private $conn;

@@ -1,5 +1,7 @@
 <?php
-
+/**Aqui está ativando a sessão para quando o usuário logar e
+ * anexando todas as rotas do site
+ */
 session_start();
 require_once("vendor/autoload.php");
 
