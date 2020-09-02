@@ -99,7 +99,7 @@ Site criado para uma livraria.
 <hr/>
 <p>
   <b>Observações:</b><br/>
-  Talvez seja necessário o Visual Studio Code para ajustar no código-fonte, login e senha para se conectar ao banco.
+  <ul>Talvez seja necessário o Visual Studio Code para ajustar no código-fonte, login e senha para se conectar ao banco.</ul>
 </p>
 
 
