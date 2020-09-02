@@ -95,3 +95,14 @@ Site criado para uma livraria.
 
 </p>
 
+<hr/>
+
+<p>
+<b>Observações:</b><br/>
+<ul>
+  Talvez seja necessário usar o Visual Studio Code para ajustar os dados da conexão com o banco no código-fonte
+</ul>
+
+</p>
+
+
