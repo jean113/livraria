@@ -54,9 +54,22 @@ Site criado para uma livraria.
 <br/>  
 <ul>
   
-  <li>Git versão 2.28.0 - para baixar os arquivos para o computador</li>
-  <li>Xampp versão 3.2.4- para instalar Apache, PHP e MySQL</li>
-  <li>MySql Community 8.0.2</li>
+  <li>Git versão 2.28.0 - para baixar os arquivos para o computador.</li>
+  <li>Xampp versão 3.2.4- para instalar Apache, PHP e MySQL.</li>
+  <li>MySQL Community 8.0.2</li>
+  
+</ul>
+</p>
+
+<hr/>
+
+<p>
+<b>Dependências:</b>
+<br/>  
+<ul>
+  
+  <li>Rain TPL - versão 3.0.0 ou superior.</li>
+  <li>Slim Framework - versão 2.0</li>
   
 </ul>
 </p>
