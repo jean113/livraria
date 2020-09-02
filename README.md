@@ -57,6 +57,7 @@ Site criado para uma livraria.
   <li>Git versão 2.28.0 - para baixar os arquivos para o computador.</li>
   <li>Xampp versão 3.2.4- para instalar Apache, PHP e MySQL.</li>
   <li>MySQL Community 8.0.2</li>
+  <li>Visual Studio Code.</li>
   
 </ul>
 </p>
@@ -82,27 +83,21 @@ Site criado para uma livraria.
   <li>Instalar o Xampp no computador.</li>
       - Durante a instalação, será necessário instalar apenas PHP, Apache e o MySQL.
   <li>Instalar o MySQL Community no computador.</li>
-      - Atualizar a versão instalada e adicionar componentes como o WorkBench para criar o database.
-  <li>Entrar no Xampp. Na tela que se abre, clicar nos botões start para Apache e MySQL.</li>
-  <li>Com o Git, baixar código-fonte para o computador.</li>
-  <li>Entrar no MySQL.</li>
-  <li>Criar database db_livraria.</li>
-  <li>Com o script em anexo para gerar as tabelas.</li>
-      - Lembrando que para funcionar o login do site, é necessário ter um usuário cadastrado com senha em formato MD5.
+      - Necessário para adicionar componentes como o WorkBench para criar o database e definir root e senha.
+  <li>Com o Git instalado, baixar o código-fonte para o computador.</li>
+      - comando: git clone "link do repositório" (use o botão verde code neste repositório para ter o link)
+  <li>Levantar o serviço do MySQL pelo Xampp ou pelo MySQL Notifier</li>
+  <li>Entrar no MySQL através do MySQL WorkBench.</li>
+  <li>Executar o script "script_database" em anexo para gerar as tabelas.</li>
+      - Lembrando que para funcionar o login do site, é necessário ter um usuário cadastrado com senha em formato MD5 (criado junto com as tabelas).
+  <li>Usar o Visual Studio Code para ajustar os dados da conexão com o banco no código-fonte.</li>
+      - Isso é feito no arquivo BD.php que fica na pasta src/Model.
+  <li>Entrar no Xampp e clicar no botão start na linha Apache para levantar o serviço.</li>
   <li>Entrar em C:\xampp\htdocs e colocar todo o código-fonte.</li>
+      - Pode limpar todo o conteúdo da pasta htdocs antes.
   <li>Entrar no seu browser e digitar localhost.</li> 
-      - Se quiser, pode limpar todo o conteúdo da pasta htdocs antes, assim para iniciar o site, basta clicar no botão admin do Apache pelo Xampp.
+     
 </ol>
-
-</p>
-
-<hr/>
-
-<p>
-<b>Observações:</b><br/>
-<ul>
-  Talvez seja necessário usar o Visual Studio Code para ajustar os dados da conexão com o banco no código-fonte.
-</ul>
 
 </p>
 
