@@ -1,6 +1,6 @@
-CREATE DATABASE livraria;
+CREATE DATABASE db_livraria;
 
-USE livraria;
+USE db_livraria;
 
 CREATE TABLE editora (
   id INTEGER UNSIGNED NOT NULL AUTO_INCREMENT,
