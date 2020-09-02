@@ -35,14 +35,14 @@ Site criado para uma livraria.
 <b>Ferramentas utilizadas:</b>
 <br/>
 <ul>
-  <li>Visual Studio Code</li>
-  <li>Linguagem PHP </li>
-  <li>Banco de Dados MySQl</li>
-  <li>Xampp</li>	
-  <li>Slim Framework para as rotas</li>
-  <li>Rain Templates para os templates</li>
-  <li>Composer para gerenciar as dependências</li>
-  <li>DBDesigner4 para modelar o banco de dados</li>
+  <li>Visual Studio Code.</li>
+  <li>Linguagem PHP. </li>
+  <li>Banco de Dados MySQL.</li>
+  <li>Xampp.</li>	
+  <li>Slim Framework para as rotas.</li>
+  <li>Rain Templates para os templates.</li>
+  <li>Composer para gerenciar as dependências.</li>
+  <li>DBDesigner4 para modelar o banco de dados.</li>
 </ul>
 
 </p>
@@ -81,15 +81,16 @@ Site criado para uma livraria.
 <ol>
   <li>Instalar o Xampp no computador.</li>
       - Durante a instalação, será necessário instalar apenas PHP, Apache e o MySQL.
-  <li>Instalar o MySQL no computador.</li>
+  <li>Instalar o MySQL Community no computador.</li>
+      - Atualizar a versão instalada e adicionar componentes como o WorkBench para criar o database.
   <li>Entrar no Xampp. Na tela que se abre, clicar nos botões start para Apache e MySQL.</li>
   <li>Com o Git, baixar código-fonte para o computador.</li>
   <li>Entrar no MySQL.</li>
   <li>Criar database db_livraria.</li>
-  <li>Com o script em anexo para gerar as tabelas</li>
+  <li>Com o script em anexo para gerar as tabelas.</li>
       - Lembrando que para funcionar o login do site, é necessário ter um usuário cadastrado com senha em formato MD5.
   <li>Entrar em C:\xampp\htdocs e colocar todo o código-fonte.</li>
-  <li>Entrar no seu browser e digitar localhost</li> 
+  <li>Entrar no seu browser e digitar localhost.</li> 
       - Se quiser, pode limpar todo o conteúdo da pasta htdocs antes, assim para iniciar o site, basta clicar no botão admin do Apache pelo Xampp.
 </ol>
 
@@ -100,7 +101,7 @@ Site criado para uma livraria.
 <p>
 <b>Observações:</b><br/>
 <ul>
-  Talvez seja necessário usar o Visual Studio Code para ajustar os dados da conexão com o banco no código-fonte
+  Talvez seja necessário usar o Visual Studio Code para ajustar os dados da conexão com o banco no código-fonte.
 </ul>
 
 </p>
